@@ -1,0 +1,107 @@
+
+
+body.scrolled header a.home-button {
+    background-image: $LogoSmall!important;
+}
+
+header {
+    a.home-button,
+    a.menu-button {
+        position: fixed;
+        top: 15px;
+        height: 64px;
+        width: 64px;
+        text-indent: -99999px;
+        z-index: 999;
+        background-size: contain;
+        background-repeat: no-repeat;
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+    }
+
+    a.home-button {
+        left: calc(15px + 1%);
+        background-image: $LogoLarge;
+        width: 253px;
+    }
+    a.menu-button {
+        right: calc(15px + 1%);
+        background-image: url(/themes/sswebpack_base/images/menu-buttonV2.png);
+    }
+    a.menu-button:hover {
+        /*background-image: url(/themes/sswebpack_base/images/menu-button.png);*/
+    }
+
+    a.close-menu {
+        display: block;
+        text-align: left;
+        font-size: 52px;
+        font-family: sans-serif;
+        margin-top: -0.55em;
+        padding-bottom: 0.55em;
+    }
+
+    nav {
+        /*transition: all 0.2s ease-out 0.2s;
+        -webkit-transition: all 0.2s ease-out 0.2s;*/
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 0;
+        background-color: $Accent2Colour;
+        color: $White;
+        z-index: 9999;
+        padding: 2em 0;
+        opacity: 0.93;
+        max-width: 400px;
+        z-index: 30;
+    }
+
+
+    nav a {
+        color: $Accent1Colour;
+        text-decoration: none;
+        font-size: 21px;
+        display: block;
+        text-transform: lowercase;
+    }
+    nav a:hover,
+    nav a.current {
+        color: $Accent4Colour!important;
+    }
+
+    nav a.section {
+        color: $White;
+    }
+    nav ul li a {
+        padding: 0.3em 0em;
+    }
+    nav ul li li a:before {
+        content: "— ";
+    }
+    nav ul li li a {
+        font-size: 14px;
+    }
+}
+
+
+body.has-menu-overlay header nav {
+    width: calc(39% - 1% - 15px);
+    padding: calc(15px + 1%);
+    min-width: 200px;
+    max-width: 400px;
+    overflow-y: auto;
+}
+
+@media (min-width: 375px) {
+    body header a.home-button {
+        background-image: $LogoLarge;
+    }
+    body.scrolled header a.home-button {
+        background-image: $LogoSmall;
+    }
+}

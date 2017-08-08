@@ -1,0 +1,317 @@
+.red {
+    color: $Accent1Colour;
+}
+.black {
+    color: $Accent2Colour;
+}
+.green {
+    color: $Accent3Colour;
+}
+.blue {
+    color: $Accent4Colour;
+}
+.yellow {
+    color: $Accent5Colour;
+}
+
+.typography {
+    font-family: $TextFont;
+    font-size: 14px;
+    color: $TextColour;
+
+    /**
+     * all
+     */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        padding-top: 0.3em;
+        padding-bottom: 0.3em;
+        font-family: $HeaderFont;
+        color: $Accent1Colour;
+    }
+
+    li,
+    p {
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+    }
+
+
+
+    > h1:first-child,
+    > h2:first-child,
+    > h3:first-child,
+    > h4:first-child,
+    > h5:first-child,
+    > h6:first-child,
+    > li:first-child,
+    > ul:first-child,
+    article > h1:first-child,
+    article > h2:first-child,
+    article > h3:first-child,
+    article > h4:first-child,
+    article > h5:first-child,
+    article > h6:first-child,
+    article > li:first-child,
+    article > ul:first-child,
+    section > h1:first-child,
+    section > h2:first-child,
+    section > h3:first-child,
+    section > h4:first-child,
+    section > h5:first-child,
+    section > h6:first-child,
+    section > li:first-child,
+    section > ul:first-child,
+    div > h1:first-child,
+    div > h2:first-child,
+    div > h3:first-child,
+    div > h4:first-child,
+    div > h5:first-child,
+    div > h6:first-child,
+    div > li:first-child,
+    div > ul:first-child {
+        padding-top: 0!important;
+        margin-top: 0!important;
+    }
+
+    > div,
+    > article div {
+        padding-top: 3em;
+    }
+    > div:first-child {
+        padding-top: 0;
+    }
+    /**
+     * headings
+     */
+    h1,
+    h2 {
+        font-size: 36px;
+        padding-top: 1.7em;
+        padding-bottom: 0.7em;
+        line-height: 0.8;
+        text-transform: lowercase;
+        font-weight: 700;
+    }
+
+    h3,
+    h4,
+    h5,
+    h6 {
+        padding-top: 1.5em;
+        font-size: 1.3em;
+        font-weight: 900;
+        text-transform: lowercase;
+    }
+
+
+    /**
+     * lists and paragraphs
+     */
+    li,
+    p {
+        line-height: 1.5;
+    }
+
+    ol {
+        padding: 2em;
+    }
+    li ol {
+        padding: 1em;
+    }
+    ol li {
+        list-style-type: decimal;
+    }
+    li ol li {
+        list-style-type:lower-alpha;
+    }
+    li li ol li {
+        margin-left: 5em;
+        list-style-type: decimal-leading-zero;
+    }
+    li li li ol li {
+        list-style-type:upper-roman;
+    }
+    strong,
+    b,
+    em,
+    i,
+    u {
+        color: $Accent2Colour;
+        font-style: normal;
+        font-weight: normal;
+        text-decoration: none;
+    }
+    strong,
+    b {
+        color: $Accent3Colour;
+    }
+
+
+    em,
+     i,
+     u {
+        text-decoration: none;
+    }
+
+    a {
+        color: $LinkColour;
+    }
+
+    h3 a {
+        text-decoration: none;
+    }
+
+    li {
+        list-style: disc;
+        list-style-position: outside;
+        margin-left: 1em;
+    }
+
+    img {
+        max-width: calc(100% - 22px);
+        border: 1px solid $LightGrey;
+        display: block;
+        margin: 1em 0;
+        padding: 10px;
+        width: 50%;
+    }
+
+
+
+
+    /**
+     * Tables
+     */
+
+
+
+     /* tables */
+    table {
+        margin: 1em 0;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    th,
+    td {
+        padding: 0.7em;
+        border-left: 1px solid $White;
+        border-top: 1px solid $White;
+        background-color: $SuperLightGrey;
+        font-size: 12px!important;
+        vertical-align: top;
+    }
+
+    table th[scope='col'] {
+        vertical-align: bottom;
+        font-weight: bold;
+        color: $White;
+        background-color: $Accent1Colour
+    }
+
+    table th[scope='row'] {
+        text-align: left;
+        vertical-align: top;
+        font-weight: bold;
+    }
+
+    table th a {
+        color: $White;
+    }
+
+    table td {
+        vertical-align: top;
+    }
+
+    table td p,
+     table td li {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    table td ol,
+    table td ul {
+        margin-top: 0px;
+        padding-top: 0px;
+        margin-left: 0px;
+        padding-left: 0px;
+    }
+
+    td li {
+        font-size: 0.9em;
+        list-style-position: inside;
+        list-style-type: square;
+        list-style-image: none;
+    }
+
+    table ul {
+        -moz-column-count: 1;
+        -moz-column-gap: 0;
+        -webkit-column-count: 1;
+        -webkit-column-gap: 0;
+        column-count: 1;
+        column-gap: 0;
+    }
+
+     /**
+      * address and pre
+      */
+
+
+
+    blockquote p {
+        font-size: 1em;
+    }
+
+    address {
+        font-style: normal;
+        margin-left: 3em;
+        font-family: $MonoFont, monospace;
+        padding-top: 2em;
+        padding-bottom: 2em;
+        color: #000;
+        font-size: 12px;
+    }
+
+    pre {
+        font-family: $MonoFont, monospace;
+        line-height: 1.7;
+        font-size: 0.7em;
+        padding: 0.7em;
+        margin: 0.9em 0;
+        color: #000;
+        background-color: $SuperLightGrey;
+          /* gradient */
+        background-position: 0px center;
+        background-repeat: no-repeat;
+        border-top: 2px solid #808383;
+        -moz-border-radius-topleft: 5px;
+        border-top-left-radius: 5px;
+        padding-left: 3em;
+        text-indent: -2em!important;
+        display: block;
+    }
+
+
+    /**
+     * media
+     */
+     div.media {
+         padding: 2em 0;
+         background-color: $SuperLightGrey;
+         margin: 1em 0;
+     }
+
+     div.media iframe {
+         margin-left: auto!important;
+         margin-right: auto!important;
+         display: block;
+         max-width: 100%!important;
+     }
+}

@@ -1,0 +1,312 @@
+/**
+* basic form holders
+*/
+.typography {
+    form {
+        padding: 1em 0;
+        clear: both;
+        width: 100%!important;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    div.field {
+        padding-top: 1em;
+        width: 100%;
+        padding-bottom: 0.8em;
+        padding-top: 0.8em;
+        clear: left;
+    }
+
+    .middleColumn,
+    .Actions,
+    input.action,
+    p.ForgotPassword,
+    p.checkbox {
+        display: block;
+        text-align: left;
+    }
+
+    .fieldgroup .middleColumn {
+        margin-left: 0px;
+    }
+
+
+
+    /**
+     * input fields basics
+     *
+     */
+
+    .middleColumn input,
+    .middleColumn textarea,
+    .middleColumn select,
+    .middleColumn span.readonly {
+        border-top: 1px solid transparent;
+        border-right: 1px solid transparent;
+        border-bottom: 1px solid $LightGrey;
+        border-left: 1px solid $LightGrey;
+        padding: 0.7em;
+        margin-top: 0px;
+        width: calc(100% - 20px);
+        color: $TextColour;
+        max-width: 40em;
+        transition: all 0.3s ease 0s;
+        -webkit-transition: all 0.3s ease 0s;
+        font-family: $MonoFont;
+    }
+
+    input[type=text],
+    input[type=email],
+    input[type=password],
+    textarea,
+    select,
+    .middleColumn span.readonly  {
+        color: $TextColour;
+    }
+
+
+
+    /**
+    * fields interaction
+    */
+
+
+    .middleColumn input:focus,
+    .middleColumn textarea:focus,
+    .middleColumn select:focus {
+        color: $White;
+        outline: none!important;
+    }
+
+    input[type=text]:focus,
+    input[type=email]:focus,
+    input[type=password]:focus,
+    textarea:focus,
+    select:focus{
+        background-color: $DarkGreen;
+        border-top: 1px solid $LightGrey;
+        border-right: 1px solid $LightGrey;
+        margin-top: 5px!important;
+        display: block;
+    }
+
+    /**
+    * labels
+    */
+
+
+    label {
+        padding-bottom: 0.5em;
+    }
+
+    label.FormHeading {
+        display: block;
+        color: $TextColour;
+        margin-bottom: 1em;
+    }
+
+    label.left {
+        display: inline-block;
+        border-bottom: 1px solid $LightGrey;
+    }
+
+    label.required {
+        display: block;
+        color: $DarkGreen;
+        font-size: 0.8em;
+    }
+
+    /**
+    * labels right
+    */
+
+    .middleColumn + label.right {
+        display: block;
+        text-align: left;
+        font-family: serif;
+        font-style: italic;
+        padding-top: 0.5em;
+    }
+
+
+    /**
+    * messages
+    */
+
+    .message {
+        background-color: $WarningColour;
+        display: block;
+        padding: 0.3em;
+        text-align: center;
+        border-bottom: 1px solid #D3D4B6;
+        color: $White;
+        max-width: calc(40em);
+    }
+
+
+    .field span.message {
+        margin-top: 0.5em;
+        display: block;
+        max-width: calc(40em);
+        padding: 0.5em;
+    }
+
+    .field .middleColumn .message {
+        margin-left: 0px;
+    }
+
+    span.bad,
+    span.required {
+        background-color: $BadColour;
+        color: $White;
+    }
+
+    span.good,
+    span.good {
+        background-color: $GoodColour;
+        color: $White;
+    }
+
+
+
+    /**
+    * actions
+    */
+    .Actions {
+        padding-top: 2em;
+    }
+
+    .Actions input,
+    input.action {
+        padding-right: 30px;
+    }
+
+    .Actions input.action {
+        margin-left: 0px;
+    }
+
+    .Actions input.action:focus {
+        outline: none;
+        color: $TextColour;
+    }
+
+    .action,
+    .Actions input,
+    input.action {
+        color: $TextColour;
+        padding: 0.7em;
+        background: -moz-linear-gradient(top,$White 0%,$Seagrey);
+        background: -webkit-gradient(linear,left top,left bottom,from($White),to($Seagrey));
+        border-radius: 5px 5px 5px 5px;
+        -moz-border-radius: 5px 5px 5px 5px;
+        -webkit-border-radius: 5px 5px 5px 5px;
+        border: 1px solid $LightGrey;
+        text-decoration: none!important;
+        padding-right: 17px!important;
+        width: auto;
+        text-align: center;
+        font-family: $HeaderFont;
+        font-weight: 700;
+    }
+
+    .action:hover,
+    .action:focus,
+    .Actions input:hover,
+    input.action:hover {
+        border: 1px solid $LightGrey;
+        text-decoration: none;
+        color: $Accent1Colour;
+
+    }
+
+    /**
+    * special fields several
+    */
+
+
+    input.password,
+    input.numeric,
+    input.file,
+    input.currency,
+    input.date {
+        max-width: 17em;
+        font-family: $MonoFont;
+    }
+
+
+    /**
+    * dropdown
+    */
+
+    .middleColumn select {
+        max-width: calc(40em + 1.4em);
+        width: 100%;
+        margin-top: 5px;
+    }
+
+    .dropdown label.left {
+        padding-bottom: 3px;
+    }
+
+
+    /**
+     * textarea
+     */
+
+     .middleColumn textarea {
+         margin-top: 0px;
+     }
+
+
+    /**
+    * password
+    */
+
+    .confirmedpassword .middleColumn {
+        margin-left: 0px;
+    }
+
+    .confirmedpassword .middleColumn a {
+        display: block;
+    }
+
+
+
+    /**
+    * readonly
+    */
+
+    .readonly .middleColumn span {
+        display: block;
+        padding: 0.7em;
+        font-family: $MonoFont;
+        max-width: 40em;
+    }
+
+    //
+    // /**
+    // * mobile only!
+    // *
+    // */
+    //
+    //
+}
+
+
+@media screen and (max-width: 960px) {
+    .typography {
+        .middleColumn li {
+            width: 100%;
+        }
+
+        .middleColumn,
+        .Actions,
+        input.action,
+        p.ForgotPassword,
+        p.checkbox {
+            margin-left: 0px!important;
+        }
+    }
+}
