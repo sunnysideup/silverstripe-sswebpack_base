@@ -2,8 +2,8 @@
 <html lang="$ContentLocale">
 <head>
     $ExtendedMetaTags
-    <% if $IsNotWebpackDevServer %><link href="{$WebpackBaseURL}{$ThemeDir}/dist/css/style.css" rel="stylesheet" type="text/css"  /><% end_if %>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <% include WebpackCSSLinks %>
 </head>
 <body id="Body$ClassName">
 <div id="Wrapper">
@@ -21,6 +21,6 @@
         <% include Footer %>
     </div>
 </div>
-    <script src="{$WebpackBaseURL}{$ThemeDir}/dist/bundle.js" charset="utf-8"></script>
+<% include WebpackJSLinks %>
 </body>
 </html>
