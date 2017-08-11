@@ -220,6 +220,13 @@ figure.large-image a.button:active {
     padding: 10px;
 }
 
+.full-width-content .content-padding {
+    padding: 40px 20px 0;
+    @include bp(min-md){
+        padding: 40px 40px 0;
+    }
+}
+
 @media screen and (min-width: 450px) {
     #MainDetails .content-padding {
         margin-left: auto;
@@ -293,18 +300,28 @@ figure.large-image a.button:active {
         float: left;
     }
 
-    #MainDetails.two > section,
-    #MainDetails.two > main,
-    #MainDetails.two > aside {
-        width: 50%;
-        clear: none;
+    #MainDetails.two {
+        > section,
+        > main,
+        > aside {
+            width: 50%;
+            clear: none;
+        }
+        .full-width-content .content-padding {
+            max-width: calc((100% - 1100px)/2 + 1100px);
+            padding: 40px 40px 0;
+        }
     }
 
-    #MainDetails.three > section,
-    #MainDetails.three > main,
-    #MainDetails.three > aside {
-        width: 33.3%;
-        clear: none;
+
+
+    #MainDetails.three {
+        > section,
+        > main,
+        > aside {
+            width: 33.3%;
+            clear: none;
+        }
     }
 
     #MainDetails .content-padding {
