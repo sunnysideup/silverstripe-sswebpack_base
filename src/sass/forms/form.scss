@@ -283,6 +283,10 @@
         padding: 0.7em;
         font-family: $MonoFont;
         max-width: 40em;
+        span {
+            padding: 0;
+            display: inline;
+        }
     }
 
     //

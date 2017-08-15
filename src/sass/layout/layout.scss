@@ -35,7 +35,7 @@ header {
     height: calc(64px + 30px);
     z-index: 1;
     border-bottom: 1px solid $Accent1Colour;
-    @include background-opacity($MenuBarBackgroundColour, 0.3);
+    @include background-opacity($MenuBarBackgroundColour, 0.5);
     z-index: 10;
 }
 
@@ -50,11 +50,12 @@ header {
     z-index: 2;
     background-color: $Accent2Colour;
     padding: 0.5em;
-    color: $Accent1Colour;
     margin-bottom: 20px;
+    color: $White;
 }
 #Breadcrumbs a {
-    color: $Accent2Colour;
+    color: $Accent5Colour;
+    text-decoration: none;
 }
 
 .empty-space {
