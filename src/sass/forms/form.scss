@@ -202,7 +202,7 @@
         border-radius: 5px 5px 5px 5px;
         -moz-border-radius: 5px 5px 5px 5px;
         -webkit-border-radius: 5px 5px 5px 5px;
-        border: 1px solid $LightGrey;
+        border: 1px solid $DarkGrey;
         text-decoration: none!important;
         padding-right: 17px!important;
         width: auto;
@@ -215,10 +215,11 @@
     .action:focus,
     .Actions input:hover,
     input.action:hover {
+        background: -moz-linear-gradient(top,$White 0%,$SuperLightGrey);
+        background: -webkit-gradient(linear,left top,left bottom,from($White),to($SuperLightGrey));
         border: 1px solid $LightGrey;
-        text-decoration: none;
         color: $Accent1Colour;
-
+        text-decoration: none;
     }
 
     /**
