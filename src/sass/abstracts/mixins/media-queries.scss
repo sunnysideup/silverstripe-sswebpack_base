@@ -17,6 +17,9 @@
     @media (min-width: 375px)  { @content; }
   }
   /* MAX-WIDTH */
+  @else if $point == max-xl {
+    @media (max-width: 1550px) { @content; }
+  }
   @else if $point == max-lg {
     @media (max-width: 1100px) { @content; }
   }

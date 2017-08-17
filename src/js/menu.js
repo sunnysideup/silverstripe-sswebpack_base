@@ -7,9 +7,6 @@ jQuery(document).ready(
     }
 );
 
-
-
-
 /*
  *@author nicolaas[at]sunnysideup.co.nz
  *
@@ -44,9 +41,11 @@ var basics = {
         basics.windowResizeListener();
         basics.scrollListener();
         basics.menuButtonListener();
+        basics.menuExpandListener();
         basics.setLargeImageSize();
         //do last ...
         basics.setDefaultWidthAndHeight();
+        basics.scrollClickListener();
         jQuery(window).scroll();
         //redo when window is resized
     },
@@ -112,6 +111,45 @@ var basics = {
         // Hide Header on on scroll down
     },
 
+    menuExpandListener: function(){
+        jQuery('#main-menu ul').find('li').each(
+            function(i, el) {
+                el = jQuery(el);
+                if(el.children('ul').length !== 0) {
+                    if(el.hasClass('current') || el.hasClass('section')) {
+                        el.addClass('opened');
+                    } else {
+                        el.addClass('closed');
+                    }
+                    el.prepend('<span class="open"><i class="material-icons">expand_more</i></span><span class="close"><i class="material-icons">expand_less</i></span>');
+                }
+            }
+        );
+        jQuery('#main-menu').on(
+            'click',
+            'span.open',
+            function(e) {
+                event.preventDefault();
+                event.stopPropagation();
+                jQuery(this).parent('li')
+                    .addClass('opened')
+                    .removeClass('closed');
+                return false;
+            }
+        )
+        jQuery('#main-menu').on(
+            'click',
+            'span.close',
+            function(e) {
+                event.preventDefault();
+                event.stopPropagation();
+                jQuery(this).parent('li')
+                    .addClass('closed')
+                    .removeClass('opened');
+                return false;
+            }
+        )
+    },
 
 
     /**
@@ -194,6 +232,10 @@ var basics = {
                 jQuery(el).height(height + 'px');
             }
         );
+    },
+
+    scrollClickListener: function()
+    {
         jQuery('figure.large-image').on(
             'click',
             function(event){
@@ -204,6 +246,13 @@ var basics = {
                     },
                     200
                 );
+            }
+        );
+        jQuery('figure.large-image a.button').on(
+            'click',
+            function(event){
+                event.stopPropagation();
+                return true;
             }
         );
         jQuery('header').on(
@@ -218,7 +267,6 @@ var basics = {
             }
         );
     }
-
 
 
 };

@@ -19,12 +19,6 @@
     </div>
 
     <div id="FooterRecentlyUpdated" class="footer-col">
-        <p>Recently Updated</p>
-        <ul>
-    <% loop $RecentlyUpdated %>
-            <li><a href="$Link" class="$LinkingMode">$MenuTitle</a></li>
-    <% end_loop %>
-        </ul>
 
         <% if $InThisSection %>
         <p>In this section</p>
@@ -43,6 +37,13 @@
             <% end_loop %>
         </ul>
         <% end_if %>
+        
+        <p>Recently Updated</p>
+        <ul>
+    <% loop $RecentlyUpdated %>
+            <li><a href="$Link" class="$LinkingMode">$MenuTitle</a></li>
+    <% end_loop %>
+        </ul>
 
     </div>
 

@@ -59,42 +59,68 @@ header {
         opacity: 0.93;
         max-width: 400px;
         z-index: 30;
-    }
-
-
-    nav a {
-        color: $White;
-        text-decoration: none;
-        font-size: 21px;
-        display: block;
-        text-transform: lowercase;
-    }
-    nav a:hover,
-    nav a.current {
-        color: $Accent4Colour!important;
-    }
-
-    nav a.section {
-        color: $White;
-    }
-    nav ul li a {
-        padding: 0.3em 0em;
-    }
-    nav ul li li a:before {
-        content: "— ";
-    }
-    nav ul li li a {
-        font-size: 14px;
+        display: none;
+        a, span.close, span.open  {
+            color: $White;
+            text-decoration: none;
+            font-size: 21px;
+            display: block;
+            text-transform: lowercase;
+        }
+        a:hover,
+        a.current {
+            color: $Accent4Colour!important;
+        }
+        a.section {
+            color: $White;
+        }
+        ul {
+            li {
+                a, span.close, span.open {
+                    padding: 0.3em 0em;
+                }
+                li {
+                    a, span.close, span.open {
+                        display: block;
+                        padding: 0.3em 0em;
+                        font-size: 14px;
+                        &:before {
+                            content: "— ";
+                        }
+                    }
+                }
+            }
+            li.opened {
+                span.close {display: block;}
+                span.open {display: none;}
+            }
+            li.closed {
+                span.close {display: none;}
+                span.open {display: block;}
+            }
+            li.closed > ul {display: none;}
+            li.opened > ul {display: block;}
+            span.close, span.open {
+                cursor: pointer;
+                float: right;
+            }
+        }
     }
 }
 
 
-body.has-menu-overlay header nav {
-    width: calc(39% - 1% - 15px);
-    padding: calc(15px + 1%);
-    min-width: 200px;
-    max-width: 400px;
-    overflow-y: auto;
+body.has-menu-overlay {
+    header nav {
+        width: calc(39% - 1% - 15px);
+        padding: calc(15px + 1%);
+        min-width: 200px;
+        max-width: 400px;
+        overflow-y: auto;
+        display: block;
+    }
+    a.menu-button.open {
+        opacity: 0;
+    }
 }
 
 @media (min-width: 375px) {

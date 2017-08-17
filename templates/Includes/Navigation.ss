@@ -4,17 +4,15 @@
 <% loop Menu(1) %>
         <li class="$FirstLast">
             <a href="$Link" class="$LinkingMode">$MenuTitle</a>
-    <% if $isSection %>
-        <% if Children %>
+        <% if ChildrenShowInMenu %>
         <ul>
-            <% loop Children %>
+            <% loop ChildrenShowInMenu %>
                 <% if ShowInMenus %>
             <li class="$FirstLast">
                 <a href="$Link" class="$LinkingMode">$MenuTitle</a>
-                    <% if $isSection %>
-                        <% if Children %>
+                        <% if ChildrenShowInMenu %>
                 <ul>
-                            <% loop Children %>
+                            <% loop ChildrenShowInMenu %>
                                 <% if ShowInMenus %>
                         <li class="$FirstLast">
                             <a href="$Link" class="$LinkingMode">$MenuTitle</a>
@@ -23,13 +21,11 @@
                             <% end_loop %>
                 </ul>
                         <% end_if %>
-                    <% end_if %>
             </li>
                 <% end_if %>
             <% end_loop %>
         </ul>
         <% end_if %>
-    <% end_if %>
         </li>
 <% end_loop %>
     </ul>

@@ -1,0 +1,45 @@
+
+
+#footer {
+    background-color: $MenuBarBackgroundColour;
+    color: $White;
+    min-height: 50vh;
+    position: relative;
+    clear: both;
+    .footer-col {
+        padding-left: 5%;
+        padding-right: 5%;
+        text-transform: uppercase;
+        font-size: 1.5em;
+        padding-top: 2em;
+        ul, li {
+            padding-left: 0;
+            margin-left: 0;
+            list-style: none;
+        }
+        h4,
+        a {
+            color: $White;
+            text-decoration: none;
+        }
+        a.section,
+        a.current,
+        a:hover {
+            color: $Accent5Colour;
+        }
+    }
+    #FooterRecentlyUpdated li {
+        font-size: 14px;
+        text-transform: none;
+        &:before {
+            content: '-';
+            padding-right: 10px;
+        }
+        a {
+            text-transform: lowercase;
+        }
+    }
+    #FooterCopyrightMessage {
+        clear: both;
+    }
+}
