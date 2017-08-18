@@ -54,7 +54,7 @@ header {
         width: 0;
         background-color: $Accent2Colour;
         color: $White;
-        z-index: 9999;
+        z-index: 4;
         padding: 2em 0;
         opacity: 0.93;
         max-width: 400px;
@@ -114,9 +114,12 @@ body.has-menu-overlay {
         width: calc(39% - 1% - 15px);
         padding: calc(15px + 1%);
         min-width: 200px;
-        max-width: 400px;
+        max-width: 100%;
         overflow-y: auto;
         display: block;
+        @include bp(min-md){
+            max-width: 400px;
+        }
     }
     a.menu-button.open {
         opacity: 0;
