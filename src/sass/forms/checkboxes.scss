@@ -51,128 +51,26 @@
         max-width: calc(40em - 3em);
     }
 
-    .checkbox input {
-        float: left;
-        margin-top: 0px;
-    }
-
     .optionset li {
-        padding: 0px!important;
-        margin: 0px!important;
+        display: flex;
+        align-items: center;
         width: 100%;
+        padding: 0 0 0.7em!important;
+        margin: 0!important;
+        input {
+            float: left;
+            margin: 0.1em 0.4em 0 0;
+        }
     }
 
     .optionset li label {
         display: inline-block;
         width: calc(100% - 50px);
+        padding: 0;
     }
 
     .optionset .middleColumn ul,
     .checkboxset .middleColumn ul {
         max-width: calc(40em + 3em);
-    }
-
-    /** hide the input itself **/
-    .optionset li input,
-    .optionset li input[type='radio'],
-    .field.checkbox input {
-        display: none;
-    }
-
-    /** create basic outline for label */
-    .optionset li input + label,
-    .optionset li input[type='radio'] + label,
-    .field.checkbox input + label {
-        background-color: none;
-        border: none;
-        border-radius: 3px;
-        display: inline-block;
-        position: relative;
-        -webkit-appearance: none;
-        padding-left: 25px;
-        font-size: 16px!important;
-    }
-
-    /** highlight label when selected **/
-    .optionset li input:checked + label,
-    .optionset li input[type='radio']:checked + label,
-    .field.checkbox input:checked + label {
-        border: none;
-        color: $TextColour!important;
-        background-color: transparent;
-    }
-
-
-
-    /** add active state for checked and unchecked **/
-    .optionset li input + label:active,
-    .optionset li input:checked + label:active ,
-    .optionset li input[type='radio'] + label:active,
-    .optionset li input[type='radio']:checked + label:active,
-    .field.checkbox input + label:active,
-    .field.checkbox input:checked + label:active {
-    }
-
-    /** hover state for label **/
-    .optionset li:hover input + label,
-    .optionset li:hover input[type='radio'] + label,
-    .field.checkbox:hover input + label {
-        color: $TextColour!important;
-    }
-
-    /** standard tickbox **/
-    .optionset li input + label:after,
-    .optionset li input[type='radio'] + label:after,
-    .field.checkbox input + label:after {
-        content: '×';
-        font-size: 28px;
-        position: absolute;
-        top: 0px;
-        margin-top: -12px;
-        left: 0px;
-        color: $LightGreen;
-        opacity: 0.66;
-        font-weight: normal;
-    }
-
-
-    /** hover state for tick-box */
-    .optionset li:hover input + label:after,
-    .optionset li:hover input[type='radio'] + label:after,
-    .field.checkbox:hover input + label:after {
-        color: $TextColour;
-        opacity: 0.77;
-        content: '✔';
-    }
-    /** hover state for checked tick-box **/
-    .optionset li:hover input:checked + label:after,
-    .optionset li:hover input[type='radio']:checked + label:after,
-    .field.checkbox:hover input:checked + label:after {
-        color: $DarkGreen;
-        opacity: 0.77;
-        filter: alpha(opacity=77);
-    }
-
-    /* checked state */
-    .optionset li input:checked + label:after,
-    .optionset li input[type='radio']:checked + label:after,
-    .field.checkbox input:checked + label:after {
-        content: '✔';
-        color: $DarkGreen;
-    }
-
-    /* checked state */
-    .optionset li input:checked + label:after,
-    .optionset li input[type='radio']:checked + label:after,
-    .field.checkbox input:checked + label:after {
-        opacity: 1;
-        color: $DarkGreen;
-    }
-
-    /* active state */
-    .optionset li input + label:active:after,
-    .optionset li input[type='radio'] + label:active:after,
-    .field.checkbox input + label:active:after {
-        color: $TextColour;
     }
 }
