@@ -89,6 +89,13 @@ header {
                         }
                     }
                 }
+                li.fake-entry {
+                    a {
+                        &:before {
+                            content: "« ";
+                        }
+                    }
+                }
             }
             li.opened {
                 span.close {display: block;}
