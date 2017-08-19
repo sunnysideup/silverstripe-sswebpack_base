@@ -37,9 +37,10 @@
         border: 0;
     }
 
-    .radio,
-    .checkbox {
+    input.radio,
+    input.checkbox {
         width: auto!important;
+        float: left;
     }
 
     .checkbox label.right {

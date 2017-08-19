@@ -82,10 +82,6 @@
         margin-top: 0!important;
     }
 
-    > div,
-    > article div {
-        padding-top: 3em;
-    }
     > div:first-child {
         padding-top: 0;
     }
@@ -187,7 +183,7 @@
 
     img {
         max-width: calc(100% - 22px);
-        border: 1px solid $Accent4Colour;
+        border: 1px solid #ddd;
         display: block;
         margin: 1em auto;
         padding: 10px calc(20%);
