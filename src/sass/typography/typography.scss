@@ -70,14 +70,14 @@
     section > h6:first-child,
     section > li:first-child,
     section > ul:first-child,
-    div > h1:first-child,
-    div > h2:first-child,
-    div > h3:first-child,
-    div > h4:first-child,
-    div > h5:first-child,
-    div > h6:first-child,
-    div > li:first-child,
-    div > ul:first-child {
+    > div > h1:first-child,
+    > div > h2:first-child,
+    > div > h3:first-child,
+    > div > h4:first-child,
+    > div > h5:first-child,
+    > div > h6:first-child,
+    > div > li:first-child,
+    > div > ul:first-child {
         padding-top: 0!important;
         margin-top: 0!important;
     }
@@ -187,8 +187,7 @@
 
     img {
         max-width: calc(100% - 22px);
-        border: 1px solid $LightGrey;
-        border-radius: 5px;
+        border: 1px solid $Accent4Colour;
         display: block;
         margin: 1em auto;
         padding: 10px calc(20%);

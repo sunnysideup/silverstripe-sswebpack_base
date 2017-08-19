@@ -74,6 +74,11 @@ header {
         a.section {
             color: $White;
         }
+        a.click-to-open{
+            &:after {
+                content: ' …';
+            }
+        }
         ul {
             li {
                 a, span.close, span.open {
@@ -92,7 +97,7 @@ header {
                 li.fake-entry {
                     a {
                         &:before {
-                            content: "« ";
+                            content: "» ";
                         }
                     }
                 }
