@@ -16,7 +16,7 @@
 
 .typography {
     font-family: $TextFont;
-    font-size: 14px;
+    font-size: 16px;
     color: $TextColour;
 
     /**
@@ -32,6 +32,10 @@
         padding-bottom: 0.3em;
         font-family: $HeaderFont;
         color: $Accent1Colour;
+    }
+
+    ul {
+        padding-left: 15px;
     }
 
     li,
@@ -66,22 +70,34 @@
     section > h6:first-child,
     section > li:first-child,
     section > ul:first-child,
-    div > h1:first-child,
-    div > h2:first-child,
-    div > h3:first-child,
-    div > h4:first-child,
-    div > h5:first-child,
-    div > h6:first-child,
-    div > li:first-child,
-    div > ul:first-child {
+    > div:first-child > h1:first-child,
+    > div:first-child > h2:first-child,
+    > div:first-child > h3:first-child,
+    > div:first-child > h4:first-child,
+    > div:first-child > h5:first-child,
+    > div:first-child > h6:first-child,
+    > div:first-child > li:first-child,
+    > div:first-child > ul:first-child,
+    > div:first-child > div:first-child > h1:first-child,
+    > div:first-child > div:first-child > h2:first-child,
+    > div:first-child > div:first-child > h3:first-child,
+    > div:first-child > div:first-child > h4:first-child,
+    > div:first-child > div:first-child > h5:first-child,
+    > div:first-child > div:first-child > h6:first-child,
+    > div:first-child > div:first-child > li:first-child,
+    > div:first-child > div:first-child > ul:first-child,
+    > div:first-child > div:first-child > div:first-child > h1:first-child,
+    > div:first-child > div:first-child > div:first-child > h2:first-child,
+    > div:first-child > div:first-child > div:first-child > h3:first-child,
+    > div:first-child > div:first-child > div:first-child > h4:first-child,
+    > div:first-child > div:first-child > div:first-child > h5:first-child,
+    > div:first-child > div:first-child > div:first-child > h6:first-child,
+    > div:first-child > div:first-child > div:first-child > li:first-child,
+    > div:first-child > div:first-child > div:first-child > ul:first-child          {
         padding-top: 0!important;
         margin-top: 0!important;
     }
 
-    > div,
-    > article div {
-        padding-top: 3em;
-    }
     > div:first-child {
         padding-top: 0;
     }
@@ -90,12 +106,15 @@
      */
     h1,
     h2 {
-        font-size: 36px;
+        font-size: 40px;
         padding-top: 1.7em;
         padding-bottom: 0.7em;
         line-height: 0.8;
-        text-transform: lowercase;
         font-weight: 700;
+    }
+
+    h2 {
+        font-size: 36px;
     }
 
     h3,
@@ -105,7 +124,13 @@
         padding-top: 1.5em;
         font-size: 1.3em;
         font-weight: 900;
-        text-transform: lowercase;
+    }
+
+    h3 {
+        font-size: 1.5em;
+    }
+    h6 {
+        font-size: 1em!important;
     }
 
 
@@ -174,13 +199,13 @@
 
     img {
         max-width: calc(100% - 22px);
-        border: 1px solid $LightGrey;
-        border-radius: 5px;
+        border: 1px solid #ddd;
         display: block;
         margin: 1em auto;
-        padding: 20px calc(10% - 2px);
-        width: 80%;
-        background-color: $SuperLightGrey
+        padding: 10px calc(20%);
+        width: 60%;
+        border-left: 0px solid transparent;
+        border-right: 0px solid transparent;
     }
 
 

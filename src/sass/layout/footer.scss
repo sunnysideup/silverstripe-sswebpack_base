@@ -28,7 +28,7 @@
             color: $Accent5Colour;
         }
     }
-    #FooterRecentlyUpdated li {
+    ul.menu-list li {
         font-size: 14px;
         text-transform: none;
         &:before {
@@ -41,5 +41,6 @@
     }
     #FooterCopyrightMessage {
         clear: both;
+        padding-top: 4em;
     }
 }

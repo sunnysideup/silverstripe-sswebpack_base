@@ -2,7 +2,15 @@
     "name": "sunnysideup/sswebpack_base",
     "type": "silverstripe-theme",
     "description": "Base SilverStripe theme that can be used in conjunction with Silverstripe Webpack engine",
-    "keywords": ["silverstripe", "webpack", "webpack theme", "silverstripe webpack", "blank theme"],
+    "keywords": [
+        "Silverstripe-CMS",
+        "CMS",
+        "Silverstripe",
+        "webpack",
+        "webpack theme",
+        "silverstripe webpack",
+        "blank theme"
+    ],
     "license": "Sunny Side Up (BSD-3-Clause and CUSTOM)",
     "authors": [
         {
@@ -11,10 +19,10 @@
             "role": "lead developer"
         }
     ],
-    "require":
-    {
+    "require": {
         "composer/installers": "*",
-        "silverstripe/framework": "~3.6"
+        "silverstripe/framework": "~3.1",
+        "silverstripe/cms": "~3.1"
     },
     "extra": {
         "installer-name": "sswebpack_base"

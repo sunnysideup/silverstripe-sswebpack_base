@@ -2,12 +2,7 @@
 
     <main>
         <div class="typography content-padding">
-            <div id="MainContentSection">
-                <h1 id="PageTitle">$Title</h1>
-                $Content
-            </div>
-            <% include FormSection %>
-            <% include PageCommentSection %>
+            <% include ContentSectionAll %>
         </div>
     </main>
 

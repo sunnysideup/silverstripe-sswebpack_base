@@ -30,14 +30,14 @@
         <% end_if %>
 
         <% if $AlsoSee %>
-        <p>Also see ...</p>
+        <p>Also see</p>
         <ul>
             <% loop $AlsoSee %>
             <li><a href="$Link" class="$LinkingMode">$MenuTitle</a></li>
             <% end_loop %>
         </ul>
         <% end_if %>
-        
+
         <p>Recently Updated</p>
         <ul>
     <% loop $RecentlyUpdated %>
