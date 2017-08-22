@@ -1,18 +1,3 @@
-.red {
-    color: $Accent1Colour;
-}
-.black {
-    color: $Accent2Colour;
-}
-.green {
-    color: $Accent3Colour;
-}
-.blue {
-    color: $Accent4Colour;
-}
-.yellow {
-    color: $Accent5Colour;
-}
 
 .typography {
     font-family: $TextFont;
@@ -131,6 +116,7 @@
     }
     h6 {
         font-size: 1em!important;
+        color: $Accent2Colour;
     }
 
 
@@ -224,28 +210,46 @@
         margin-left: auto;
         margin-right: auto;
     }
-
     th,
     td {
         padding: 0.7em;
-        border-left: 1px solid $White;
-        border-top: 1px solid $White;
-        background-color: $SuperLightGrey;
-        font-size: 12px!important;
+        border-right: 1px dotted $LightGrey;
+        background-color: $White;
+        font-size: 14px!important;
         vertical-align: top;
+        border-bottom: 1px solid $Accent1Colour
+    }
+    th:last-child,
+    td:last-child {
+        border-right: none;
     }
 
     table th[scope='col'] {
         vertical-align: bottom;
         font-weight: bold;
-        color: $White;
-        background-color: $Accent1Colour
+        border-bottom: 2px solid $Accent1Colour
     }
 
     table th[scope='row'] {
         text-align: left;
         vertical-align: top;
         font-weight: bold;
+    }
+
+    thead {
+        tr:first-child {
+            td, th {
+                border-top: 2px solid $Accent1Colour
+            }
+        }
+    }
+
+    tfoot {
+        tr:first-child {
+            td, th {
+                border-top: 2px solid $Accent1Colour
+            }
+        }
     }
 
     table th a {
@@ -271,7 +275,6 @@
     }
 
     td li {
-        font-size: 0.9em;
         list-style-position: inside;
         list-style-type: square;
         list-style-image: none;

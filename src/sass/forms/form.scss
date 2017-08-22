@@ -197,32 +197,32 @@
 
     .action,
     .Actions input,
+    a.button,
     input.action {
         color: $TextColour;
-        padding: 0.7em;
-        background: -moz-linear-gradient(top,$White 0%,$Seagrey);
-        background: -webkit-gradient(linear,left top,left bottom,from($White),to($Seagrey));
-        border-radius: 5px 5px 5px 5px;
-        -moz-border-radius: 5px 5px 5px 5px;
-        -webkit-border-radius: 5px 5px 5px 5px;
-        border: 1px solid $DarkGrey;
+        padding: 1em;
+        border-radius: 50px;
         text-decoration: none!important;
         padding-right: 17px!important;
         width: auto;
         text-align: center;
-        font-family: $HeaderFont;
+        font-family: $TextFont;
         font-weight: 700;
+        min-width: 5em;
+        display:block;
+        color: $White;
+        border: 1px solid $White;
+        background-color: $Accent1Colour;
     }
 
     .action:hover,
     .action:focus,
     .Actions input:hover,
     input.action:hover {
-        background: -moz-linear-gradient(top,$White 0%,$SuperLightGrey);
-        background: -webkit-gradient(linear,left top,left bottom,from($White),to($SuperLightGrey));
-        border: 1px solid $LightGrey;
-        color: $Accent1Colour;
         text-decoration: none;
+        border: 1px solid $LightGrey;
+        background-color: $SuperLightGrey;
+        color: $Accent1Colour;
     }
 
     /**

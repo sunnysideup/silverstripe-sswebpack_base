@@ -38,9 +38,7 @@ figure.large-image figcaption {
 
 figure.large-image a.button {
     background-color: $Accent1Colour;
-    -moz-border-radius: 2px;
-    -webkit-border-radius: 2px;
-    border-radius: 7px;
+    border-radius: 50px;
     border: 1px solid $White;
     display: block;
     cursor: pointer;

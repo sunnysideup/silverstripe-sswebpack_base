@@ -1,32 +1,23 @@
 <div class="$NumberOfColumns" id="MainDetails">
+<%-- <% include ColHolder_A NumberOfColumns=two %> --%>
 
-    <main>
-        <div class="typography content-padding">
+    <% include Col1_A %>
             <% include ContentSectionAll %>
-        </div>
-    </main>
+    <% include Col1_B %>
 
     <% if $hasSideBar %>
-    <aside id="Sidebar" >
-        <div class="typography content-padding">
+    <% include Col2_A %>
+            <% include SidebarImage %>
             <% include Sidebar %>
-            <% if $MySidebarImage %>
-                <div id="MySidebarImage">
-                    <img src="$MySidebarImage.Link" alt="$MySidebarImage.Title" />
-                </div>
-            <% end_if %>
-        </div>
-    </aside>
+    <% include Col2_B %>
     <% end_if %>
 
 
 
     <% if $SecondColumn %>
-    <section id="SecondColumn">
-        <div class="typography content-padding">
+    <% include Col3_A %>
             $SecondColumn
-        </div>
-    </section>
+    <% include Col3_B %>
     <% end_if %>
 
-</div>
+<% include ColHolder_B %>
