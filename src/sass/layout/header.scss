@@ -11,8 +11,15 @@ header {
     z-index: 10;
 }
 
-.scrolled header:hover{
-    cursor: n-resize;
+.scrolled {
+    header {
+        opacity: 0.3;
+        background-color: $Accent2Colour;
+        &:hover{
+            cursor: n-resize;
+        }
+
+    }
 }
 
 #Breadcrumbs {

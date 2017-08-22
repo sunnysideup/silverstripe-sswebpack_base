@@ -1,5 +1,4 @@
 
-
 body.scrolled header a.home-button {
     background-image: $LogoSmall!important;
 }
@@ -122,6 +121,7 @@ header {
 
 
 body.has-menu-overlay {
+    overflow: hidden;
     header nav {
         width: calc(39% - 1% - 15px);
         padding: calc(15px + 1%);
@@ -151,126 +151,123 @@ body.has-menu-overlay {
 
 
 @include bp(min-xl-ish){
-    #Wrapper {
-        header {
-            width: 100%;
-            a.menu-button {
-                display: none;
-            }
-            nav#main-menu {
-                display: block!important;
-                position: absolute;
-                padding: 0;
+    body.not-scrolled {
+        #Wrapper {
+            header {
                 width: 100%;
-                max-width: 100%;
-                position: absolute;
-                top: 0;
-                right: 0;
-                left: 0;
-                bottom: 0;
-                margin: 0;
-                background-color: transparent;
-                overflow: auto;
-                a.close-menu {
+                a.menu-button {
                     display: none;
                 }
-                a:hover,
-                a.current {
-                    color: $White!important;
-                    border-bottom: 1px solid $Accent4Colour!important;
-                }
-                #search-form {
-                    float: right;
-                    width: 150px;
+                nav#main-menu {
+                    display: block!important;
+                    position: absolute;
                     padding: 0;
-                    margin: 0;
+                    top: 0px;
                     right: 30px;
-                    top: 17px;
-                    form, fieldset {
+                    left: 200px;
+                    bottom: 0;
+                    margin: 0;
+                    width: auto;
+                    max-width: 100%;
+                    background-color: transparent;
+                    overflow: hidden;
+                    a.close-menu {
+                        display: none;
+                    }
+                    a:hover,
+                    a.current {
+                        color: $White!important;
+                        border-bottom: 1px solid $Accent4Colour!important;
+                    }
+                    #search-form {
+                        position: absolute;
+                        top: 0px;
+                        right: 0;
+                        width: 150px;
                         padding: 0;
                         margin: 0;
-                        div {
+                        form, fieldset {
                             padding: 0;
                             margin: 0;
-                        }
-                        i {
-                            color: #fff;
-                        }
-                        input {
-                            border: none;
-                            border-bottom: 1px solid #fff;
-                            background-color: transparent;
-                            outline: none;
-                            opacity: 0.3;
-                            color: #fff;
-                            &:focus {
-                                opacity: 1;
+                            div {
+                                padding: 0;
+                                margin: 0;
                             }
-                        }
-                    }
-                }
-                > ul {
-                    position: absolute;
-                    bottom: 0px;
-                    top: 0px;
-                    right: 190px;
-                    margin: 0;
-                    padding: 0;
-                    padding-top: 23px;
-                    display: block;
-                    text-align: right;
-                    a {
-                      padding: 0;
-                      border-bottom: 1px solid transparent;
-                    }
-                    > li {
-                        display: inline-block;
-                        padding: 0px 20px 0 0;
-                        a.click-to-open:after {
-                            content: '';
-                        }
-                        &.opened {
-                            ul {
-                                padding-top: 1em;
-                                display: block;
-                                position: absolute;
-                                right: 0;
-                                left: 0;
-                                text-align: center;
-                                li {
-                                    display: inline-block;
-                                    padding: 0 10px;
+                            i {
+                                color: #fff;
+                            }
+                            input {
+                                border: none;
+                                border-bottom: 1px solid #fff;
+                                background-color: transparent;
+                                outline: none;
+                                opacity: 0.3;
+                                color: #fff;
+                                &:focus {
+                                    opacity: 1;
                                 }
                             }
                         }
-                        li {
-                            display: none;
+                    }
+                    > ul {
+                        position: absolute;
+                        bottom: 10px;
+                        right: 0;
+                        margin: 0;
+                        padding: 0;
+                        display: block;
+                        text-align: right;
+                        a {
+                          padding: 0;
+                          font-size: 16px;
+                          border-bottom: 1px solid transparent;
+                        }
+                        > li {
+                            display: inline-block;
+                            padding: 0px 20px 0 0;
+                            a.click-to-open:after {
+                                content: '';
+                            }
+                            &.opened {
+                                ul {
+                                    margin-top: -57px;
+                                    display: block;
+                                    position: absolute;
+                                    right: 170px;
+                                    left: 0;
+                                    text-align: right;
+                                    li {
+                                        display: inline-block;
+                                        padding: 0 10px;
+                                        a {
+                                            font-size: 14px;
+                                        }
+                                    }
+                                }
+                            }
+                            li {
+                                display: none;
+                            }
                         }
                     }
                 }
             }
         }
     }
+}
 
-    body.scrolled {
+
+@include bp(min-xl-ish){
+    body.not-scrolled {
         #Wrapper {
-            header {
-                nav#main-menu {
-                    width: auto;
-                    left: auto;
-                    ul {
-                        display: none!important;
-                        padding-top: 10px;
-                        ul {
-                            padding-top: 0px;
+            nav#main-menu {
+                > ul {
+                    > li {
+                        a {
+                            font-size: 20px;
                         }
-
-                    }
-                    #search-form {
-                        top: 10px;
                     }
                 }
-
             }
         }
     }
