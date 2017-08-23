@@ -64,7 +64,6 @@ header {
             text-decoration: none;
             font-size: 21px;
             display: block;
-            text-transform: lowercase;
         }
         a:hover,
         a.current {
@@ -151,6 +150,7 @@ body.has-menu-overlay {
 
 
 @include bp(min-xl-ish){
+    #Breadcrumbs {display: none;}
     body.not-scrolled {
         #Wrapper {
             header {
@@ -170,7 +170,7 @@ body.has-menu-overlay {
                     width: auto;
                     max-width: 100%;
                     background-color: transparent;
-                    overflow: hidden;
+                    overflow: visible;
                     a.close-menu {
                         display: none;
                     }
@@ -212,7 +212,8 @@ body.has-menu-overlay {
                     > ul {
                         position: absolute;
                         bottom: 10px;
-                        right: 0;
+                        right: 170px;
+                        left: 0;
                         margin: 0;
                         padding: 0;
                         display: block;
@@ -233,17 +234,24 @@ body.has-menu-overlay {
                             }
                             &.opened {
                                 ul {
-                                    margin-top: -57px;
+                                    margin-top: 30px;
                                     display: block;
                                     position: absolute;
-                                    right: 170px;
+                                    right: 0;
                                     left: 0;
-                                    text-align: right;
+                                    text-align: center;
                                     li {
                                         display: inline-block;
                                         padding: 0 10px;
                                         a {
                                             font-size: 14px;
+                                            color: $Accent2Colour;
+                                        }
+                                        a:hover, a.current {
+                                            color: $Accent1Colour!important;
+                                        }
+                                        &.last {
+                                            padding: 0;
                                         }
                                     }
                                 }

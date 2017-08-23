@@ -43,6 +43,12 @@
         padding-top: 2em;
         font-size: 16px;
     }
+    h3 {
+        border-bottom: 1px dotted $LightGrey;
+        color: $LightGrey;
+        line-height: 2;
+        margin-bottom: 0.5em!important;
+    }
 }
 
 
