@@ -239,19 +239,17 @@ body.has-menu-overlay {
                                     position: absolute;
                                     right: 0;
                                     left: 0;
-                                    text-align: center;
+                                    text-align: right;
                                     li {
                                         display: inline-block;
-                                        padding: 0 10px;
+                                        padding: 10px;
+                                        @include background-opacity($Accent2Colour);
                                         a {
                                             font-size: 14px;
                                             color: $Accent2Colour;
                                         }
                                         a:hover, a.current {
                                             color: $Accent1Colour!important;
-                                        }
-                                        &.last {
-                                            padding: 0;
                                         }
                                     }
                                 }
