@@ -225,6 +225,9 @@ body.has-menu-overlay {
                         > li {
                             display: inline-block;
                             padding: 0px 20px 0 0;
+                            a {
+                                font-size: 20px;
+                            }
                             a.click-to-open:after {
                                 content: '';
                             }
@@ -260,14 +263,19 @@ body.has-menu-overlay {
 }
 
 
-@include bp(min-xl-ish){
+@include bp(min-xl){
     body.not-scrolled {
         #Wrapper {
-            nav#main-menu {
-                > ul {
-                    > li {
-                        a {
-                            font-size: 20px;
+            header {
+                nav#main-menu {
+                    #search-form {
+                        position: absolute;
+                        top: 41px;
+                    }
+                    > ul {
+                        right: 180px;
+                        ul {
+                            right: 0!important;
                         }
                     }
                 }

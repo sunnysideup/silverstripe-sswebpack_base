@@ -1,15 +1,11 @@
-
-
 #footer {
     background-color: $MenuBarBackgroundColour;
     color: $White;
-    min-height: 50vh;
     position: relative;
     clear: both;
+    padding: 0 calc(15px + 1%) 0;
     .footer-col {
-        padding-left: 5%;
-        padding-right: 5%;
-        text-transform: uppercase;
+        clear: both;
         font-size: 1.5em;
         padding-top: 2em;
         ul, li {
@@ -29,18 +25,39 @@
         }
     }
     ul.menu-list li {
-        font-size: 14px;
+        font-size: 20px;
         text-transform: none;
-        &:before {
-            content: '-';
-            padding-right: 10px;
+        float: left;
+        padding: 0;
+        &:after {
+            content: ' / ';
+            margin-right: 10px;
         }
-        a {
-            text-transform: lowercase;
+        &:last-child:after {
+            content: '';
         }
+
     }
     #FooterCopyrightMessage {
         clear: both;
-        padding-top: 4em;
+        padding-top: 2em;
+        font-size: 16px;
+    }
+}
+
+
+@include bp(min-md){
+    footer#footer .footer-col {
+        width: 30%;
+        padding-left: 2.5%;
+        padding-right: 2.5%;
+        float: left;
+        clear: none;
+        &:first-child {
+            padding-left: 0px;
+        }
+        &:last-child {
+            padding-right: 0px;
+        }
     }
 }
