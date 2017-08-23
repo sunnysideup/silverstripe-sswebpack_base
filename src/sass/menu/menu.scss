@@ -248,6 +248,9 @@ body.has-menu-overlay {
                             li {
                                 display: none;
                             }
+                            &.last {
+                                padding: 0;
+                            }
                         }
                     }
                 }
