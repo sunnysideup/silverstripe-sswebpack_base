@@ -37,7 +37,7 @@ figure.large-image {
         bottom: 0;
         line-height: 1;
         h1, span {
-            font-size: calc(5.5vh + 5.5vw);
+            font-size: calc(3.5vh + 3.5vw);
             background-color: rgba(125,125,125, 0.3);
             border-radius: 5px;
             display: inline-block;
@@ -60,7 +60,7 @@ figure.large-image {
         }
         span {
             font-weight: 400;
-            font-size: calc(3.5vh + 3.5vw);
+            font-size: calc(2.5vh + 2.5vw);
         }
     }
 
@@ -90,20 +90,7 @@ figure.large-image {
 @include bp(min-md) {
     figure.large-image {
         figcaption {
-            padding-top: 100px;
-            h1, span {
-            }
-            h1 {
-                font-size: calc(3.5vh + 3.5vw);
-            }
-            span {
-                font-size: calc(2.5vh + 2.5vw);
-            }
-        }
-
-        a.button {
-        }
-        a.button:hover {
+            padding-top: 80px;
         }
     }
 

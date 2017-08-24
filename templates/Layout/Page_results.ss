@@ -15,14 +15,12 @@
                 </div>
             <% end_if %>
 
-            <ul id="SearchResults">
+            <div id="SearchResults">
                 <% loop Results %>
-                    <li class="$EvenOdd">
-                        <h3><a href="$Link">$Title</a></h3>
-                        <p>$Content.Summary</p>
-                    </li>
+                <h3><a href="$Link">$Title</a></h3>
+                <p>$Content.Summary</p>
                 <% end_loop %>
-            </ul>
+            </div>
 
             <% if Results.MoreThanOnePage %>
                 <div class="pageNumbers bottomPageNumbers">
