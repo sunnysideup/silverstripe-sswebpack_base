@@ -17,26 +17,26 @@ header {
     header {
         opacity: 0.3;
         background-color: $Accent2Colour;
-        &:hover{
-            cursor: n-resize;
-        }
-
     }
 }
 
-#Breadcrumbs {
-    position: absolute;
-    top: calc(64px + 30px + 15px);
-    right: calc(15px + 1%);
-    z-index: 2;
-    padding: 0.5em;
-    margin-bottom: 20px;
-    color: $Accent3Colour;
-    font-size: 14px;
-}
-#Breadcrumbs a {
-    color: $Accent5Colour;
-    text-decoration: none;
+#Breadcrumbs {display: none;}
+@include bp(min-md){
+    #Breadcrumbs {
+        display: block;
+        position: absolute;
+        top: calc(64px + 30px + 15px);
+        right: calc(15px + 1%);
+        z-index: 2;
+        padding: 0.5em;
+        margin-bottom: 20px;
+        color: $Accent3Colour;
+        font-size: 14px;
+        a {
+            color: $Accent5Colour;
+            text-decoration: none;
+        }
+    }
 }
 
 .empty-space {
