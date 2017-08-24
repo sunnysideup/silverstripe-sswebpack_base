@@ -181,7 +181,7 @@ body.has-menu-overlay {
                     }
                     #search-form {
                         position: absolute;
-                        top: 0px;
+                        bottom: 10px;
                         right: 0;
                         width: 150px;
                         padding: 0;
@@ -279,7 +279,7 @@ body.has-menu-overlay {
                 nav#main-menu {
                     #search-form {
                         position: absolute;
-                        top: 41px;
+                        bottom: 10px;
                     }
                     > ul {
                         right: 180px;

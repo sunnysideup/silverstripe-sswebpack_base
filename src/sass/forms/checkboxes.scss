@@ -26,6 +26,9 @@
         width: 19em;
         float: left;
         max-width: calc(40em + 3em);
+        &:before {
+            content: '';
+        }
     }
 
     .middleColumn .radio,
