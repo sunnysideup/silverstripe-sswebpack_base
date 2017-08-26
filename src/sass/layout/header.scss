@@ -20,7 +20,9 @@ header {
     }
 }
 
-#Breadcrumbs {display: none;}
+#Breadcrumbs {
+    display: none;
+}
 @include bp(min-md){
     #Breadcrumbs {
         display: block;
@@ -30,7 +32,7 @@ header {
         z-index: 2;
         padding: 0.5em;
         margin-bottom: 20px;
-        color: $Accent3Colour;
+        color: $LightGrey;
         font-size: 14px;
         a {
             color: $Accent5Colour;

@@ -98,6 +98,9 @@ header {
                             content: "« ";
                         }
                     }
+                    a.section {
+                        color: $White!important;
+                    }
                 }
             }
             li.opened {
@@ -249,6 +252,9 @@ body.has-menu-overlay {
                                         @include background-opacity(#000, 0.7);
                                         a {
                                             font-size: 14px;
+                                            &:before {
+                                                content: '';
+                                            }
                                         }
                                         a:hover, a.current {
                                             color: $Accent4Colour!important;
