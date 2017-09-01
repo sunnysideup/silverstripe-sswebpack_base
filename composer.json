@@ -1,5 +1,5 @@
 {
-    "name": "sunnysideup/sskube",
+    "name": "sunnysideup/sswebpack_base",
     "type": "silverstripe-theme",
     "description": "Base SilverStripe theme that can be used in conjunction with Silverstripe Webpack engine",
     "keywords": [
@@ -25,6 +25,6 @@
         "sunnysideup/sswebpack_engine_only": "dev-master"
     },
     "extra": {
-        "installer-name": "sskube"
+        "installer-name": "sswebpack_base"
     }
 }
