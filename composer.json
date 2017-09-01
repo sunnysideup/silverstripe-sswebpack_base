@@ -25,6 +25,6 @@
         "sunnysideup/sswebpack_engine_only": "*"
     },
     "extra": {
-        "installer-name": "sswebpack_base"
+        "installer-name": "sskube"
     }
 }
