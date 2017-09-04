@@ -25,6 +25,6 @@
         "sunnysideup/webpack_theme_engine_only": "dev-master"
     },
     "extra": {
-        "installer-name": "webpack_theme"
+        "installer-name": "webpacktheme"
     }
 }
