@@ -1,12 +1,12 @@
-# Silverstripe sswebpack base module
-[![Build Status](https://travis-ci.org/sunnysideup/silverstripe-sswebpack_base.svg?branch=master)](https://travis-ci.org/sunnysideup/silverstripe-sswebpack_base)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/sunnysideup/silverstripe-sswebpack_base/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/sunnysideup/silverstripe-sswebpack_base/?branch=master)
-[![codecov.io](https://codecov.io/github/sunnysideup/silverstripe-sswebpack_base/coverage.svg?branch=master)](https://codecov.io/github/sunnysideup/silverstripe-sswebpack_base?branch=master)
-![helpfulrobot](https://helpfulrobot.io/sunnysideup/sswebpack_base/badge)
+# Silverstripe webpack_theme module
+[![Build Status](https://travis-ci.org/sunnysideup/silverstripe-webpack_theme.svg?branch=master)](https://travis-ci.org/sunnysideup/silverstripe-webpack_theme)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/sunnysideup/silverstripe-webpack_theme/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/sunnysideup/silverstripe-webpack_theme/?branch=master)
+[![codecov.io](https://codecov.io/github/sunnysideup/silverstripe-webpack_theme/coverage.svg?branch=master)](https://codecov.io/github/sunnysideup/silverstripe-webpack_theme?branch=master)
+![helpfulrobot](https://helpfulrobot.io/sunnysideup/webpack_theme/badge)
 
-[![Latest Stable Version](https://poser.pugx.org/sunnysideup/sswebpack_base/version)](https://packagist.org/packages/sunnysideup/sswebpack_base)
-[![License](https://poser.pugx.org/sunnysideup/sswebpack_base/license)](https://packagist.org/packages/sunnysideup/sswebpack_base)
-[![Monthly Downloads](https://poser.pugx.org/sunnysideup/sswebpack_base/d/monthly)](https://packagist.org/packages/sunnysideup/sswebpack_base)
+[![Latest Stable Version](https://poser.pugx.org/sunnysideup/webpack_theme/version)](https://packagist.org/packages/sunnysideup/webpack_theme)
+[![License](https://poser.pugx.org/sunnysideup/webpack_theme/license)](https://packagist.org/packages/sunnysideup/webpack_theme)
+[![Monthly Downloads](https://poser.pugx.org/sunnysideup/webpack_theme/d/monthly)](https://packagist.org/packages/sunnysideup/webpack_theme)
 
 
 ## Documentation
@@ -15,7 +15,7 @@
 
  * [Developer Docs](docs/en/INDEX.md)
  * [User Guide](docs/en/userguide.md)
- * [API Docs](http://docs.ssmods.com/sunnysideup/sswebpack_base/classes.xhtml)
+ * [API Docs](http://docs.ssmods.com/sunnysideup/webpack_theme/classes.xhtml)
 
 ## Requirements
 
@@ -34,19 +34,19 @@ see [composer.json](composer.json) for details
 
 
 ```
-composer require sunnysideup/sswebpack_base
+composer require sunnysideup/webpack_theme
 ```
 
 ### Configuration
 
 
 
-In the `_config` folder you will find the `sswebpack_base.yml.example`
+In the `_config` folder you will find the `webpack_theme.yml.example`
 file that shows options for the configuration of this module.
 
 We recommend that you:
 
-  1. copy these `sswebpack_base.yml.example` files into your
+  1. copy these `webpack_theme.yml.example` files into your
 `mysite/_config` folder
   2. remove the .example extension
   3. delete the lines you not care about, and

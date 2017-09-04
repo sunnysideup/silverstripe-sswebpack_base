@@ -1,4 +1,4 @@
-# Contributing to sswebpack base
+# Contributing to webpack_theme
 
 Please read the
 [generic write up for contributing](https://docs.silverstripe.org/en/4.0/contributing/)
