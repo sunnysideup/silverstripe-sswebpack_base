@@ -90,8 +90,12 @@ figure.large-image {
 @include bp(min-md) {
     figure.large-image {
         figcaption {
-            padding-top: 80px;
+            padding-top: 12vh;
+            h1, span {
+                font-size: calc(2vh + 2vw);
+            }
         }
     }
+
 
 }

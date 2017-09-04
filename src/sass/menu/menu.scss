@@ -179,8 +179,7 @@ body.has-menu-overlay {
                     }
                     a:hover,
                     a.current {
-                        color: $White!important;
-                        border-bottom: 1px solid $Accent4Colour!important;
+                        color: $Accent4Colour!important;
                     }
                     #search-form {
                         position: absolute;
@@ -230,7 +229,8 @@ body.has-menu-overlay {
                             display: inline-block;
                             padding: 0px 20px 0 0;
                             a {
-                                font-size: 20px;
+                                font-size: 15px;
+                                font-weight: 900;
                             }
                             a.click-to-open:after {
                                 content: '';
