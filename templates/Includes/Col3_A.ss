@@ -1,1 +1,1 @@
-<section class="typography $NumberOfColumns column">
+<section class="typography $NumberOfColumns columns">
