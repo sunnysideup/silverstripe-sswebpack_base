@@ -1,2 +1,1 @@
-<aside id="Sidebar" >
-    <div class="typography content-padding">
+<aside id="Sidebar" class="typography $NumberOfColumns columns">

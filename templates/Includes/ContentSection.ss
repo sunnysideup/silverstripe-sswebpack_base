@@ -1,5 +1,5 @@
 <div class="$NumberOfColumns" id="MainDetails">
-<%-- <% include ColHolder_A NumberOfColumns=two %> --%>
+<%-- <% include ColHolder_A %> --%>
 
     <% include Col1_A %>
             <% include ContentSectionAll %>

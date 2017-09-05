@@ -1,2 +1,1 @@
-<main>
-    <div class="typography content-padding">
+<main class="typography $NumberOfColumns columns">

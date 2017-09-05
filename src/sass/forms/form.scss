@@ -45,8 +45,8 @@
     .middleColumn span.readonly {
         border-top: 1px solid transparent;
         border-right: 1px solid transparent;
-        border-bottom: 1px solid $LightGrey;
-        border-left: 1px solid $LightGrey;
+        border-bottom: 1px solid $LighterGrey;
+        border-left: 1px solid $LighterGrey;
         padding: 0.7em;
         margin-top: 0px;
         width: calc(100% - 20px);
@@ -86,8 +86,8 @@
     textarea:focus,
     select:focus{
         background-color: $DarkGreen;
-        border-top: 1px solid $LightGrey;
-        border-right: 1px solid $LightGrey;
+        border-top: 1px solid $LighterGrey;
+        border-right: 1px solid $LighterGrey;
         margin-top: 5px!important;
         display: block;
     }
@@ -109,7 +109,7 @@
 
     label.left {
         display: inline-block;
-        border-bottom: 1px solid $LightGrey;
+        border-bottom: 1px solid $LighterGrey;
     }
 
     label.required {

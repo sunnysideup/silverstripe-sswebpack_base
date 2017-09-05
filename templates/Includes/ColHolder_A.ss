@@ -1,1 +1,2 @@
-<div class="clearfix $NumberOfColumns" id="MainDetails">
+<div class="container" id="MainDetails">
+    <div class="row">
