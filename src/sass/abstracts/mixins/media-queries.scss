@@ -20,16 +20,25 @@
   }
   /* MAX-WIDTH */
   @else if $point == max-xl {
-    @media (max-width: 1550px) { @content; }
+    @media (max-width: 1549px) { @content; }
+  }
+  @else if $point == max-xl-ish {
+    @media (max-width: 1299px) { @content; }
   }
   @else if $point == max-lg {
-    @media (max-width: 1100px) { @content; }
+    @media (max-width: 1099px) { @content; }
+  }
+  @else if $point == max-lg-ish {
+    @media (max-width: 959px)  { @content; }
   }
   @else if $point == max-md {
-    @media (max-width: 960px)  { @content; }
+    @media (max-width: 749px)  { @content; }
+  }
+  @else if $point == max-sm {
+    @media (max-width: 449px)  { @content; }
   }
   @else if $point == max-xs {
-    @media (max-width: 320px)  { @content; }
+    @media (max-width: 374px)  { @content; }
   }
 
 }
