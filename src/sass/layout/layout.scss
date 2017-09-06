@@ -71,12 +71,12 @@ body {
 }
 
 @media screen and (min-width: 1000px) {
-    #MainDetails {
+    .container {
         padding-top: 30px;
     }
 }
 @media screen and (min-width: 1550px) {
-    #MainDetails {
+    .container {
         padding-top: 50px;
     }
 

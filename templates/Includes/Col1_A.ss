@@ -1,1 +1,1 @@
-<main class="typography $NumberOfColumns $AdditionalClass columns">
+<main class="typography $NumberOfColumns $Offset columns">
