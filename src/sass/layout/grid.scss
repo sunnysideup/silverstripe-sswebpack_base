@@ -17,6 +17,8 @@
     }
 }
 
+.row {padding-top: 7vh;}
+
 /* For devices larger than 400px */
 @include bp(min-sm){
     .container {

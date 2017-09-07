@@ -1,1 +1,1 @@
-<main class="typography $NumberOfColumns $Offset columns">
+<main class="typography $NumberOfColumns <% if $Offset %>offset-by-$Offset<% end_if %> columns">

@@ -22,7 +22,8 @@
     "require": {
         "silverstripe/framework": "~3.6",
         "sunnysideup/webpack_requirements_backend": "dev-master",
-        "sunnysideup/sswebpack_engine_only": "dev-master"
+        "sunnysideup/sswebpack_engine_only": "dev-master",
+        "sunnysideup/metatags": "dev-master"
     },
     "extra": {
         "installer-name": "webpacktheme"

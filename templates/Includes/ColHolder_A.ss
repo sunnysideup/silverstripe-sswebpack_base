@@ -1,2 +1,2 @@
-<div class="container" id="MainDetails">
+<div class="container">
     <div class="row">
