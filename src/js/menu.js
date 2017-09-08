@@ -239,7 +239,7 @@ var basics = {
         jQuery('figure.large-image').on(
             'click',
             function(event){
-                var scrollTopPixels = jQuery("#MainDetails").offset().top - 62;
+                var scrollTopPixels = jQuery("#content-area").offset().top - 62;
                 jQuery('html, body').animate(
                     {
                         scrollTop: scrollTopPixels

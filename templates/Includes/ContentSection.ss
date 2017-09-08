@@ -1,6 +1,10 @@
 <% include ColHolder_A %>
 
-    <% include Col1_A NumberOfColumns=six, OffSet=offset-by-four %>
+    <% if $hasSideBar %>
+    <% include Col1_A NumberOfColumns=six %>
+    <% else %>
+    <% include Col1_A NumberOfColumns=six,four %>
+    <% end_if %>
             <% include ContentSectionInner %>
     <% include Col1_B %>
 

@@ -1,7 +1,7 @@
 .highlight {
-    border-radius: 1rem;
     padding: 1rem;
-    background-color: $SuperLightGrey;
-    border: 1px solid $LighterGrey;
+    @include background-opacity($Accent1Colour, 0.1);
+    border-top: 10px solid $Accent1Colour;
     padding-top: 2rem!important;
+    border-radius: 0 0 5px 5px;
 }
