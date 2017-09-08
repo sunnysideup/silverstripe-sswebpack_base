@@ -13,6 +13,7 @@
         box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.35);
     }
 
+    form > .Actions,
     fieldset {
         max-width: 40em;
         margin-left: auto;
@@ -94,7 +95,7 @@
     input[type=password]:focus,
     textarea:focus,
     select:focus{
-        background-color: $DarkGreen;
+        background-color: Green;
         border-top: 1px solid $LighterGrey;
         border-right: 1px solid $LighterGrey;
         margin-top: 5px!important;
@@ -151,7 +152,6 @@
         text-align: center;
         border-bottom: 1px solid #D3D4B6;
         color: $White;
-        max-width: calc(40em);
         a {
             color: $White;
         }

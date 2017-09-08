@@ -3,6 +3,7 @@
 /* Grid - from SKELETON
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .container {
+    clear: both;
     position: relative;
     width: 100%;
     margin: 0 auto;
@@ -17,7 +18,7 @@
     }
 }
 
-.row {padding-top: 7vh;}
+.row {padding-top: 2vh;}
 
 /* For devices larger than 400px */
 @include bp(min-sm){
