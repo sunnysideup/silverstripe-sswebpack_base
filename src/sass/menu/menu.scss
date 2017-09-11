@@ -59,11 +59,10 @@ header {
         max-width: 400px;
         z-index: 30;
         display: none;
-        a, span.close, span.open  {
+        a  {
             color: $White;
             text-decoration: none;
             font-size: 21px;
-            display: block;
         }
         a:hover,
         a.current {
@@ -72,18 +71,20 @@ header {
         a.section {
             color: $Accent4Colour!important;
         }
-        a.click-to-open{
-            &:after {
-                content: ' …';
+        a.show-children,
+        a.show-parent {
+            i {
+                vertical-align: middle;
             }
         }
         ul {
             li {
-                a, span.close, span.open {
-                    padding: 0.5em 0em;
+                a {
+                    padding: 0.3em 0em;
+                    display: inline-block;
                 }
                 li {
-                    a, span.close, span.open {
+                    a {
                         display: block;
                         padding: 0.3em 0em;
                         font-size: 14px;
@@ -92,30 +93,13 @@ header {
                         }
                     }
                 }
-                li.fake-entry {
-                    a {
-                        &:before {
-                            content: "« ";
-                        }
-                    }
-                    a.section {
-                        color: $White!important;
-                    }
-                }
             }
-            li.opened {
-                span.close {display: block;}
-                span.open {display: none;}
+            &.move-up {
+                bottom: 100px!important;
             }
-            li.closed {
-                span.close {display: none;}
-                span.open {display: block;}
-            }
-            li.closed > ul {display: none;}
-            li.opened > ul {display: block;}
-            span.close, span.open {
-                cursor: pointer;
-                float: right;
+            &.move-down {
+                bottom: 0px!important;
+                margin-bottom: -100px;
             }
         }
     }
@@ -235,37 +219,28 @@ body.has-menu-overlay {
                             a:after {
                                 content: ''
                             }
-                            a.click-to-open:after {
-                                content: '/...';
-                            }
-                            &.opened {
-                                ul {
-                                    margin-top: 10px;
-                                    display: block;
-                                    position: absolute;
-                                    right: 0;
-                                    left: 0;
-                                    text-align: center;
-                                    li {
-                                        display: inline-block;
-                                        padding: 10px;
-                                        border-radius: 5px;
-                                        // background-color: $Accent5Colour;
-                                        a {
-                                            font-size: 14px;
-                                            font-weight: 400;
-                                            color: $Accent2Colour;
-                                            &:before {
-                                                content: '';
-                                            }
+                            ul {
+                                margin-top: 10px;
+                                display: block;
+                                position: absolute;
+                                right: 0;
+                                left: 0;
+                                text-align: center;
+                                li {
+                                    display: inline-block;
+                                    padding: 10px;
+                                    border-radius: 5px;
+                                    // background-color: $Accent5Colour;
+                                    a {
+                                        font-size: 14px;
+                                        font-weight: 400;
+                                        color: $Accent2Colour;
+                                        &:before {
+                                            content: '';
                                         }
-                                        a:hover, a.current {
-                                            color: $Accent4Colour!important;
-                                        }
-                                        &.fake-entry a {
-                                            font-weight: 700;
-                                        }
-
+                                    }
+                                    a:hover, a.current {
+                                        color: $Accent4Colour!important;
                                     }
                                 }
                             }
