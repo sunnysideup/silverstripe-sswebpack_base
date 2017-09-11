@@ -35,6 +35,7 @@
         &:after {
             content: ' / ';
             margin-right: 10px;
+            color: $LightGrey;
         }
         &:last-child:after {
             content: '';
@@ -44,7 +45,14 @@
     #FooterCopyrightMessage {
         clear: both;
         padding-top: 2em;
-        font-size: 16px;
+        font-size: 13px;
+        padding-bottom: 2em;
+        a {
+            text-decoration: none;
+            &:hover {
+                color: $Accent5Colour;
+            }
+        }
     }
     h3 {
         border-bottom: 1px dotted $LightGrey;
