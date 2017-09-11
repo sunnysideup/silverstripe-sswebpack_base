@@ -38,18 +38,22 @@ figure.large-image {
         line-height: 1;
         h1, span {
             font-size: calc(3.5vh + 3.5vw);
-            background-color: rgba(125,125,125, 0.3);
-            border-radius: 5px;
-            display: inline-block;
-            color: $White;
-            font-family: $HeaderFont;
             padding-left: 0.2em;
             margin-bottom: 0.3em;
-            padding: 0.1em;
-            text-shadow: 1px 1px #000;
-            &:after {
-                padding: 10px;
-                content: ' ';
+            text-align: center;
+            display: block;
+            strong {
+                padding: 0.1em;
+                text-shadow: 1px 1px #000;
+                color: $White;
+                font-family: $HeaderFont;
+                border-radius: 5px;
+                display: inline-block;
+                background-color: rgba(125,125,125, 0.3);
+                &:after {
+                    padding: 10px;
+                    content: ' ';
+                }
             }
         }
         h1.Black, span.Black {

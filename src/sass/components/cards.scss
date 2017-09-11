@@ -28,11 +28,14 @@
             }
             article {
                 h3 {
-                    background-color: $LighterGrey;
+                    background-color: $Accent1OppositeColour;
                     text-align: center;
                     vertical-align: bottom;
                     padding-top: 0.5em!important;
                     color: $White!important;
+                    a {
+                        color: $White!important;
+                    }
                 }
                 > div {
                     padding: 1rem;
