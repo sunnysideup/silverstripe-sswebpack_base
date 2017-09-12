@@ -40,6 +40,9 @@ body {
 #MySidebarImage img{
     border-color: $Accent1Colour;
     width: calc(100% - 22px);
+    border: none;
+    padding:0;
+    margin: 0;
 }
 
 
