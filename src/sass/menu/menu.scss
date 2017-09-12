@@ -14,11 +14,6 @@ header {
         z-index: 3;
         background-size: contain;
         background-repeat: no-repeat;
-        -webkit-transition: all 0.3s ease;
-        -moz-transition: all 0.3s ease;
-        -o-transition: all 0.3s ease;
-        -ms-transition: all 0.3s ease;
-        transition: all 0.3s ease;
     }
 
     a.home-button {
@@ -39,8 +34,9 @@ header {
         text-align: left;
         font-size: 52px;
         font-family: sans-serif;
-        margin-top: -0.55em;
+        margin-top: 0;
         padding-bottom: 0.55em;
+        line-height: 0.5;
     }
 
     nav {
@@ -64,15 +60,9 @@ header {
             text-decoration: none;
             font-size: 21px;
         }
-        a:hover,
-        a.current {
-            color: $Accent4Colour!important;
-        }
-        a.section {
-            color: $Accent4Colour!important;
-        }
         a.show-children,
         a.show-parent {
+            border-bottom: none!important;
             i {
                 vertical-align: middle;
             }
@@ -82,16 +72,21 @@ header {
                 a {
                     padding: 0.3em 0em;
                     display: inline-block;
+                    border-bottom: 1px solid transparent;
                 }
-                li {
+                &.current {
                     a {
-                        display: block;
-                        padding: 0.3em 0em;
-                        font-size: 14px;
-                        &:before {
-                            content: "— ";
-                        }
+                        color: $Accent4Colour;
                     }
+                }
+                &.section {
+                    a {
+                        color: $Accent5Colour;
+                    }
+                }
+                &.has-parent {
+                    border-bottom: 1px solid $LightGrey;
+                    margin-bottom: 1em;
                 }
             }
             &.move-up {
@@ -124,7 +119,7 @@ body.has-menu-overlay {
     }
 }
 
-@media (min-width: 375px) {
+@include bp(min-sm) {
     body header a.home-button {
         background-image: $LogoLarge;
     }
@@ -137,7 +132,6 @@ body.has-menu-overlay {
 
 
 @include bp(min-xl-ish){
-    #Breadcrumbs {display: none;}
     body.not-scrolled {
         #Wrapper {
             header {
@@ -158,13 +152,7 @@ body.has-menu-overlay {
                     max-width: 100%;
                     background-color: transparent;
                     overflow: visible;
-                    a.close-menu {
-                        display: none;
-                    }
-                    a:hover,
-                    a.current {
-                        color: $Accent4Colour!important;
-                    }
+
                     #search-form {
                         position: absolute;
                         bottom: 10px;
@@ -195,6 +183,11 @@ body.has-menu-overlay {
                             }
                         }
                     }
+                    a.close-menu {
+                        display: none;
+                    }
+
+
                     > ul {
                         position: absolute;
                         bottom: 10px;
@@ -205,9 +198,8 @@ body.has-menu-overlay {
                         display: block;
                         text-align: center;
                         a {
-                          padding: 0;
-                          font-size: 16px;
-                          border-bottom: 1px solid transparent;
+                            padding: 0;
+                            font-size: 16px;
                         }
                         > li {
                             display: inline-block;
@@ -215,43 +207,43 @@ body.has-menu-overlay {
                             a {
                                 font-size: 1.1vw;
                                 font-weight: 400;
+                                &:hover {
+                                    border-bottom: 1px solid $White;
+                                }
                                 @include bp(min-xl){
                                     font-weight: 300;
                                 }
                             }
-                            a:after {
-                                content: ''
-                            }
-                            ul {
-                                margin-top: 10px;
-                                display: block;
-                                position: absolute;
-                                right: 0;
-                                left: 0;
-                                text-align: center;
-                                li {
-                                    display: inline-block;
-                                    padding: 10px;
-                                    border-radius: 5px;
-                                    // background-color: $Accent5Colour;
-                                    a {
-                                        font-size: 14px;
-                                        font-weight: 400;
-                                        color: $Accent2Colour;
-                                        &:before {
-                                            content: '';
-                                        }
-                                    }
-                                    a:hover, a.current {
-                                        color: $Accent4Colour!important;
-                                    }
+                            &.current {
+                                a {
+                                    font-weight: 400!important;
+                                    border-bottom: 1px solid $White;
+                                    color: $White;
                                 }
                             }
-                            li {
-                                display: none;
+                            &.section {
+                                a {
+                                    border-bottom: 1px dotted $White;
+                                    color: $White;
+                                }
+                            }
+                            &.has-parent {
+                                border-bottom: none;
+                                margin-bottom: 0;
                             }
                             &.last {
                                 padding: 0;
+                            }
+                            a.show-children,
+                            a.show-parent {
+                                i {
+                                    color: $Accent4Colour;
+                                }
+                                &:hover {
+                                    i {
+                                        color: $White;
+                                    }
+                                }
                             }
                         }
                     }
