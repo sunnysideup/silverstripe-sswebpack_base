@@ -1,12 +1,3 @@
-
-jQuery(document).ready(
-    function() {
-        //must do first!
-        basics.init();
-
-    }
-);
-
 /*
  *@author nicolaas[at]sunnysideup.co.nz
  *
@@ -115,38 +106,32 @@ var basics = {
         jQuery('#main-menu ul').find('li').each(
             function(i, el) {
                 el = jQuery(el);
-                if(el.children('ul').length !== 0) {
-                    if(el.hasClass('current') || el.hasClass('section')) {
-                        el.addClass('opened');
-                    } else {
-                        el.addClass('closed');
-                    }
-                    el.prepend('<span class="open"><i class="material-icons">expand_more</i></span><span class="close"><i class="material-icons">expand_less</i></span>');
-                }
             }
         );
         jQuery('#main-menu').on(
             'click',
-            'span.open',
+            'a.load-ajax-menu',
             function(e) {
                 event.preventDefault();
                 event.stopPropagation();
-                jQuery(this).parent('li')
-                    .addClass('opened')
-                    .removeClass('closed');
-                return false;
-            }
-        )
-        jQuery('#main-menu').on(
-            'click',
-            'span.close',
-            function(e) {
-                event.preventDefault();
-                event.stopPropagation();
-                jQuery(this).parent('li')
-                    .addClass('closed')
-                    .removeClass('opened');
-                return false;
+                var el = jQuery(this);
+                var target = el.closest('ul.my-menu-items');
+                var link = el.data('link');
+                if(el.hasClass('show-children')) {
+                    target.addClass('move-up');
+                }
+                else if(el.hasClass('show-parent')) {
+                    target.addClass('move-down');
+                }
+                jQuery.ajax(
+                    {
+                        url : link,
+                        type: 'GET',
+                        success: function(data){
+                            target.replaceWith(data);
+                        }
+                    }
+                );
             }
         )
     },
@@ -198,7 +183,13 @@ var basics = {
                      width = item.minWidth;
                  }
                  jQitem.width(width + 'px');
-             }
+            }
+            if(height <= item.minHeight) {
+                jQitem.addClass('has-min-height');
+            }
+            else {
+                jQitem.removeClass('has-min-height');
+            }
          }
          basics.runningScroll = false;
      },
@@ -248,13 +239,6 @@ var basics = {
                 );
             }
         );
-        jQuery('figure.large-image a.button').on(
-            'click',
-            function(event){
-                event.stopPropagation();
-                return true;
-            }
-        );
         jQuery('header').on(
             'click',
             function(event){
@@ -266,7 +250,16 @@ var basics = {
                 );
             }
         );
+        jQuery('header nav, header, a.do-not-bubble').on(
+            'click',
+            function(event){
+                event.stopPropagation();
+                return true;
+            }
+        );
     }
 
 
 };
+
+module.exports = basics;
