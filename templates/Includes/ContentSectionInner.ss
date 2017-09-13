@@ -1,2 +1,2 @@
-<h1 id="PageTitle">$Title</h1>
+<h1 class="main-page-title">$Title</h1>
 $Content

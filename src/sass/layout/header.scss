@@ -34,6 +34,7 @@ header {
         margin-bottom: 20px;
         color: $LightGrey;
         font-size: 14px;
+        @include background-opacity($Accent2Colour);
         a {
             color: $Accent5Colour;
             text-decoration: none;

@@ -63,8 +63,15 @@ header {
         a.show-children,
         a.show-parent {
             border-bottom: none!important;
+            margin-right: 5px;
             i {
                 vertical-align: middle;
+                border: 1px solid $LightGrey;
+                border-radius: 50%;
+                &:hover {
+                    background-color: $LightGrey;
+                    border-color: $White;
+                }
             }
         }
         ul {
@@ -211,7 +218,7 @@ body.has-menu-overlay {
                                     border-bottom: 1px solid $White;
                                 }
                                 @include bp(min-xl){
-                                    font-weight: 300;
+                                    font-weight: 400;
                                 }
                             }
                             &.current {
@@ -223,8 +230,10 @@ body.has-menu-overlay {
                             }
                             &.section {
                                 a {
-                                    border-bottom: 1px dotted $White;
-                                    color: $White;
+                                    color: $Accent4Colour;
+                                    i.material-icons {
+                                        color: $Accent4Colour;
+                                    }
                                 }
                             }
                             &.has-parent {
@@ -237,11 +246,13 @@ body.has-menu-overlay {
                             a.show-children,
                             a.show-parent {
                                 i {
-                                    color: $Accent4Colour;
+                                    color: $White;
+                                    border-color: $Accent4Colour;
                                 }
                                 &:hover {
                                     i {
-                                        color: $White;
+                                        background-color: $Accent4Colour;
+                                        border-color: $White;
                                     }
                                 }
                             }
