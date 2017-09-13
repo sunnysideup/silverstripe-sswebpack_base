@@ -40,15 +40,16 @@ figure.large-image {
             font-size: calc(3.5vh + 3.5vw);
             padding-left: 0.2em;
             margin-bottom: 0.3em;
-            text-align: center;
+            text-align: left;
             display: block;
+            line-height: 1.4;
             strong {
                 padding: 0.1em;
                 text-shadow: 1px 1px #000;
                 color: $White;
                 font-family: $HeaderFont;
                 border-radius: 5px;
-                display: inline-block;
+                display: inline;
                 background-color: rgba(125,125,125, 0.3);
                 &:after {
                     padding: 10px;
