@@ -42,7 +42,7 @@ figure.large-image {
             margin-bottom: 0.3em;
             text-align: left;
             display: block;
-            line-height: 1.4;
+            line-height: 1.6;
             strong {
                 padding: 0.1em;
                 text-shadow: 1px 1px #000;
@@ -72,7 +72,7 @@ figure.large-image {
     a.button {
         background-color: $Accent1Colour;
         border-radius: 50px;
-        border: 1px solid $White;
+        border: 1px solid rgba(125,124,125,0.5);
         display: block;
         cursor: pointer;
         color: $White;
