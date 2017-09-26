@@ -1,4 +1,4 @@
-# Silverstripe webpack_theme module
+# Silverstripe webpack theme module
 [![Build Status](https://travis-ci.org/sunnysideup/silverstripe-webpack_theme.svg?branch=master)](https://travis-ci.org/sunnysideup/silverstripe-webpack_theme)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/sunnysideup/silverstripe-webpack_theme/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/sunnysideup/silverstripe-webpack_theme/?branch=master)
 [![codecov.io](https://codecov.io/github/sunnysideup/silverstripe-webpack_theme/coverage.svg?branch=master)](https://codecov.io/github/sunnysideup/silverstripe-webpack_theme?branch=master)
