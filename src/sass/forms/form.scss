@@ -7,15 +7,16 @@
         clear: both;
         margin-left: auto;
         margin-right: auto;
-        box-shadow: 0px 4px 8px 0px $SuperLightGrey;
-        border: 1px solid $LighterGrey;
+        // box-shadow: 0px 4px 8px 0px $SuperLightGrey;
+        border-top: 1px solid $LighterGrey;
+        border-bottom: 1px solid $LighterGrey;
         background-color: $SuperLightGrey;
     }
 
     form > .Actions,
     fieldset,
     .userform-fields {
-        max-width: 40em;
+        max-width: 40rem;
         margin-left: auto;
         margin-right: auto;
     }
@@ -51,6 +52,11 @@
 
     .middleColumn input,
     .middleColumn textarea,
+    .middleColumn select {
+        background-color: $White;
+    }
+    .middleColumn input,
+    .middleColumn textarea,
     .middleColumn select,
     .middleColumn span.readonly {
         border-top: 1px solid transparent;
@@ -60,11 +66,11 @@
         padding: 0.7em;
         margin-top: 0px;
         width: calc(100% - 20px);
-        color: $TextColour;
-        max-width: 40em;
+        color: #000;
+        max-width: 40rem;
         transition: all 0.3s ease 0s;
         -webkit-transition: all 0.3s ease 0s;
-        font-family: $MonoFont;
+        font-size: 16px!important;
     }
 
     input[type=text],
@@ -73,7 +79,7 @@
     textarea,
     select,
     .middleColumn span.readonly  {
-        color: $TextColour;
+        color: #000;
     }
 
 
@@ -88,6 +94,7 @@
     .middleColumn select:focus {
         color: $White;
         outline: none!important;
+        font-family: $MonoFont;
     }
 
     input[type=text]:focus,
@@ -99,6 +106,7 @@
         border-top: 1px solid $LighterGrey;
         border-right: 1px solid $LighterGrey;
         margin-top: 5px!important;
+        margin-bottom: -5px!important;
         display: block;
     }
 
@@ -123,14 +131,13 @@
     label.left {
         display: inline-block;
         border-bottom: 1px solid $LighterGrey;
+        color: $TextColour;
     }
 
-    label.required {
-        display: block;
-        color: $DarkGreen;
-        font-size: 0.8em;
+    .required label.left:before {
+        content: "* ";
+        color: $Accent1Colour;
     }
-
     /**
     * labels right
     */
@@ -158,13 +165,20 @@
         a {
             color: $White;
         }
+        border-radius: 5px;
     }
-
+    p.message {
+        margin: 1rem 0;
+        max-width: 40rem;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+    }
 
     .field span.message {
         margin-top: 0.5em;
         display: block;
-        max-width: calc(40em);
+        max-width: calc(40rem);
         padding: 0.5em;
     }
 
@@ -172,12 +186,14 @@
         margin-left: 0px;
     }
 
+    p.message.bad,
     span.bad,
     span.required {
         background-color: $BadColour;
         color: $White;
     }
 
+    p.message.good,
     span.good,
     span.good {
         background-color: $GoodColour;
@@ -206,6 +222,8 @@
         outline: none;
         color: $TextColour;
     }
+
+
 
     .action,
     .Actions input,
@@ -237,6 +255,24 @@
         color: $Accent1Colour;
     }
 
+    .secondary-button {
+        display: inline-block;
+        color: $TextColour;
+        padding: 1em;
+        border-radius: 50px;
+        text-decoration: none!important;
+        padding-right: 17px!important;
+        width: auto;
+        text-align: center;
+        font-family: $TextFont;
+        font-weight: 700;
+        min-width: 5em;
+        border: 1px solid $LightGrey;
+        background-color: $SuperLightGrey;
+        color: $Accent1Colour;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
     /**
     * special fields several
     */
@@ -257,7 +293,7 @@
     */
 
     .middleColumn select {
-        max-width: calc(40em + 1.4em);
+        max-width: calc(40rem + 1.4em);
         width: 100%;
     }
 
@@ -297,7 +333,7 @@
         display: block;
         padding: 0.7em;
         font-family: $MonoFont;
-        max-width: 40em;
+        max-width: 40rem;
         span {
             padding: 0;
             display: inline;

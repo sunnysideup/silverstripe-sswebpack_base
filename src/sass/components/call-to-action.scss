@@ -57,8 +57,13 @@ figure.large-image {
                 }
             }
         }
-        h1.Black, span.Black {
-            text-shadow: 1px 1px #fff;
+        &.black {
+            h1, span {
+                strong {
+                    color: #000;
+                    text-shadow: 1px 1px #fff;
+                }
+            }
         }
         h1 {
             font-weight: 700;
