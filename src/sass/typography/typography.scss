@@ -91,20 +91,26 @@
      */
     h1,
     h2 {
-        font-size: 45px;
         padding-top: 1.7em;
         padding-bottom: 0.3em;
         line-height: 1;
         font-weight: 400;
+    }
+    h1 {
+        font-size: 35px;
+    }
+    h2 {
+        font-size: 30px;
+    }
+    .highlight h1,
+    .highlight h2 {
+        font-size: 25px;
     }
 
     h2, h4, h6 {
         color: $Accent2Colour;
     }
 
-    h2 {
-        font-size: 35px;
-    }
 
     h3,
     h4,
@@ -114,12 +120,12 @@
         font-weight: 700;
     }
     h3 {
-        font-size: 1.5em;
+        font-size: 25px;
     }
     h4,
     h5,
     h6 {
-        font-size: 1.3em;
+        font-size: 20px;
 
     }
 
