@@ -138,7 +138,7 @@ body.has-menu-overlay {
 
 
 
-@include bp(min-xl-ish){
+@include bp(min-lg){
     body.not-scrolled {
         #Wrapper {
             header {

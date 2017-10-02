@@ -11,334 +11,335 @@
         border-top: 1px solid $LighterGrey;
         border-bottom: 1px solid $LighterGrey;
         background-color: $SuperLightGrey;
-    }
 
-    form > .Actions,
-    fieldset,
-    .userform-fields {
-        max-width: 40rem;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-
-    div.field {
-        padding-top: 1em;
-        width: 100%;
-        padding-bottom: 0.8em;
-        padding-top: 0.8em;
-        clear: left;
-    }
-
-    .middleColumn,
-    .Actions,
-    input.action,
-    p.ForgotPassword,
-    p.checkbox {
-        display: block;
-        text-align: left;
-    }
-
-    .fieldgroup .middleColumn {
-        margin-left: 0px;
-    }
+        > .Actions,
+        fieldset,
+        .userform-fields {
+            max-width: 40rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
 
 
+        div.field {
+            padding-top: 1em;
+            width: 100%;
+            padding-bottom: 0.8em;
+            padding-top: 0.8em;
+            clear: left;
+        }
 
-    /**
-     * input fields basics
-     *
-     */
+        .middleColumn,
+        .Actions,
+        input.action,
+        p.ForgotPassword,
+        p.checkbox {
+            display: block;
+            text-align: left;
+        }
 
-    .middleColumn input,
-    .middleColumn textarea,
-    .middleColumn select {
-        background-color: $White;
-    }
-    .middleColumn input,
-    .middleColumn textarea,
-    .middleColumn select,
-    .middleColumn span.readonly {
-        border-top: 1px solid transparent;
-        border-right: 1px solid transparent;
-        border-bottom: 1px solid $LighterGrey;
-        border-left: 1px solid $LighterGrey;
-        padding: 0.7em;
-        margin-top: 0px;
-        width: calc(100% - 20px);
-        color: #000;
-        max-width: 40rem;
-        transition: all 0.3s ease 0s;
-        -webkit-transition: all 0.3s ease 0s;
-        font-size: 16px!important;
-    }
-
-    input[type=text],
-    input[type=email],
-    input[type=password],
-    textarea,
-    select,
-    .middleColumn span.readonly  {
-        color: #000;
-    }
+        .fieldgroup .middleColumn {
+            margin-left: 0px;
+        }
 
 
 
-    /**
-    * fields interaction
-    */
+        /**
+        * input fields basics
+        *
+        */
+
+        .middleColumn input,
+        .middleColumn textarea,
+        .middleColumn select {
+            background-color: $White;
+        }
+        .middleColumn input,
+        .middleColumn textarea,
+        .middleColumn select,
+        .middleColumn span.readonly {
+            border-top: 1px solid transparent;
+            border-right: 1px solid transparent;
+            border-bottom: 1px solid $LighterGrey;
+            border-left: 1px solid $LighterGrey;
+            padding: 0.7em;
+            margin-top: 0px;
+            width: calc(100% - 20px);
+            color: #000;
+            max-width: 40rem;
+            transition: all 0.3s ease 0s;
+            -webkit-transition: all 0.3s ease 0s;
+            font-size: 16px!important;
+        }
+
+        input[type=text],
+        input[type=email],
+        input[type=password],
+        textarea,
+        select,
+        .middleColumn span.readonly  {
+            color: #000;
+        }
 
 
-    .middleColumn input:focus,
-    .middleColumn textarea:focus,
-    .middleColumn select:focus {
-        color: $White;
-        outline: none!important;
-        font-family: $MonoFont;
-    }
 
-    input[type=text]:focus,
-    input[type=email]:focus,
-    input[type=password]:focus,
-    textarea:focus,
-    select:focus{
-        background-color: $Accent1OppositeColour;
-        border-top: 1px solid $LighterGrey;
-        border-right: 1px solid $LighterGrey;
-        margin-top: 5px!important;
-        margin-bottom: -5px!important;
-        display: block;
-    }
-
-    /**
-    * labels
-    */
-
-    h3 {
-        padding: 0;
-        font-weight: 400;
-    }
-    label {
-        padding-bottom: 0.5em;
-    }
-
-    label.FormHeading {
-        display: block;
-        color: $TextColour;
-        margin-bottom: 1em;
-    }
-
-    label.left {
-        display: inline-block;
-        border-bottom: 1px solid $LighterGrey;
-        color: $TextColour;
-    }
-
-    .required label.left:before {
-        content: "* ";
-        color: $Accent1Colour;
-    }
-    /**
-    * labels right
-    */
-
-    .middleColumn + label.right {
-        display: block;
-        text-align: left;
-        font-family: serif;
-        font-style: italic;
-        padding-top: 0.5em;
-    }
+        /**
+        * fields interaction
+        */
 
 
-    /**
-    * messages
-    */
+        .middleColumn input:focus,
+        .middleColumn textarea:focus,
+        .middleColumn select:focus {
+            color: $White;
+            outline: none!important;
+            font-family: $MonoFont;
+        }
 
-    .message {
-        background-color: $WarningColour;
-        display: block;
-        padding: 1em;
-        text-align: center;
-        border-bottom: 1px solid #D3D4B6;
-        color: $White;
-        a {
+        input[type=text]:focus,
+        input[type=email]:focus,
+        input[type=password]:focus,
+        textarea:focus,
+        select:focus{
+            background-color: $Accent1OppositeColour;
+            border-top: 1px solid $LighterGrey;
+            border-right: 1px solid $LighterGrey;
+            margin-top: 5px!important;
+            margin-bottom: -5px!important;
+            display: block;
+        }
+
+        /**
+        * labels
+        */
+
+        h3 {
+            padding: 0;
+            font-weight: 400;
+        }
+        label {
+            padding-bottom: 0.5em;
+        }
+
+        label.FormHeading {
+            display: block;
+            color: $TextColour;
+            margin-bottom: 1em;
+        }
+
+        label.left {
+            display: inline-block;
+            border-bottom: 1px solid $LighterGrey;
+            color: $TextColour;
+        }
+
+        .required label.left:before {
+            content: "* ";
+            color: $Accent1Colour;
+        }
+        /**
+        * labels right
+        */
+
+        .middleColumn + label.right {
+            display: block;
+            text-align: left;
+            font-family: serif;
+            font-style: italic;
+            padding-top: 0.5em;
+        }
+
+
+        /**
+        * messages
+        */
+
+        .message {
+            background-color: $WarningColour;
+            display: block;
+            padding: 1em;
+            text-align: center;
+            border-bottom: 1px solid #D3D4B6;
+            color: $White;
+            a {
+                color: $White;
+            }
+            border-radius: 5px;
+        }
+        p.message {
+            margin: 1rem 0;
+            max-width: 40rem;
+            margin-left: auto;
+            margin-right: auto;
+            box-sizing: border-box;
+        }
+
+        .field span.message {
+            margin-top: 0.5em;
+            display: block;
+            max-width: calc(40rem);
+            padding: 0.5em;
+        }
+
+        .field .middleColumn .message {
+            margin-left: 0px;
+        }
+
+        p.message.bad,
+        span.bad,
+        span.required {
+            background-color: $BadColour;
             color: $White;
         }
-        border-radius: 5px;
-    }
-    p.message {
-        margin: 1rem 0;
-        max-width: 40rem;
-        margin-left: auto;
-        margin-right: auto;
-        box-sizing: border-box;
-    }
 
-    .field span.message {
-        margin-top: 0.5em;
-        display: block;
-        max-width: calc(40rem);
-        padding: 0.5em;
-    }
-
-    .field .middleColumn .message {
-        margin-left: 0px;
-    }
-
-    p.message.bad,
-    span.bad,
-    span.required {
-        background-color: $BadColour;
-        color: $White;
-    }
-
-    p.message.good,
-    span.good,
-    span.good {
-        background-color: $GoodColour;
-        color: $White;
-    }
+        p.message.good,
+        span.good,
+        span.good {
+            background-color: $GoodColour;
+            color: $White;
+        }
 
 
 
-    /**
-    * actions
-    */
-    .Actions {
-        padding-top: 2em;
-    }
+        /**
+        * actions
+        */
+        .Actions {
+            padding-top: 2em;
+        }
 
-    .Actions input,
-    input.action {
-        padding-right: 30px;
-    }
+        .Actions input,
+        input.action {
+            padding-right: 30px;
+        }
 
-    .Actions input.action {
-        margin-left: 0px;
-    }
+        .Actions input.action {
+            margin-left: 0px;
+        }
 
-    .Actions input.action:focus {
-        outline: none;
-        color: $TextColour;
-    }
-
-
-
-    .action,
-    .Actions input,
-    a.button,
-    input.action {
-        color: $TextColour;
-        padding: 1em;
-        border-radius: 50px;
-        text-decoration: none!important;
-        padding-right: 17px!important;
-        width: auto;
-        text-align: center;
-        font-family: $TextFont;
-        font-weight: 700;
-        min-width: 5em;
-        display:block;
-        color: $White;
-        border: 1px solid $White;
-        background-color: $Accent1Colour;
-    }
-
-    .action:hover,
-    .action:focus,
-    .Actions input:hover,
-    input.action:hover {
-        text-decoration: none;
-        border: 1px solid $LightGrey;
-        background-color: $SuperLightGrey;
-        color: $Accent1Colour;
-    }
-
-    .secondary-button {
-        display: inline-block;
-        color: $TextColour;
-        padding: 1em;
-        border-radius: 50px;
-        text-decoration: none!important;
-        padding-right: 17px!important;
-        width: auto;
-        text-align: center;
-        font-family: $TextFont;
-        font-weight: 700;
-        min-width: 5em;
-        border: 1px solid $LightGrey;
-        background-color: $SuperLightGrey;
-        color: $Accent1Colour;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-    }
-    /**
-    * special fields several
-    */
-
-
-    input.password,
-    input.numeric,
-    input.file,
-    input.currency,
-    input.date {
-        max-width: 17em;
-        font-family: $MonoFont;
-    }
-
-
-    /**
-    * dropdown
-    */
-
-    .middleColumn select {
-        max-width: calc(40rem + 1.4em);
-        width: 100%;
-    }
-
-    .dropdown label.left {
-        padding-bottom: 3px;
-    }
-
-
-    /**
-     * textarea
-     */
-
-     .middleColumn textarea {
-         margin-top: 0px;
-     }
-
-
-    /**
-    * password
-    */
-
-    .confirmedpassword .middleColumn {
-        margin-left: 0px;
-    }
-
-    .confirmedpassword .middleColumn a {
-        display: block;
-    }
+        .Actions input.action:focus {
+            outline: none;
+            color: $TextColour;
+        }
 
 
 
-    /**
-    * readonly
-    */
+        .action,
+        .Actions input,
+        a.button,
+        input.action {
+            color: $TextColour;
+            padding: 1em;
+            border-radius: 50px;
+            text-decoration: none!important;
+            padding-right: 17px!important;
+            width: auto;
+            text-align: center;
+            font-family: $TextFont;
+            font-weight: 700;
+            min-width: 5em;
+            display:block;
+            color: $White;
+            border: 1px solid $White;
+            background-color: $Accent1Colour;
+        }
 
-    .readonly .middleColumn span {
-        display: block;
-        padding: 0.7em;
-        font-family: $MonoFont;
-        max-width: 40rem;
-        span {
-            padding: 0;
-            display: inline;
+        .action:hover,
+        .action:focus,
+        .Actions input:hover,
+        input.action:hover {
+            text-decoration: none;
+            border: 1px solid $LightGrey;
+            background-color: $SuperLightGrey;
+            color: $Accent1Colour;
+        }
+
+        .secondary-button {
+            display: inline-block;
+            color: $TextColour;
+            padding: 1em;
+            border-radius: 50px;
+            text-decoration: none!important;
+            padding-right: 17px!important;
+            width: auto;
+            text-align: center;
+            font-family: $TextFont;
+            font-weight: 700;
+            min-width: 5em;
+            border: 1px solid $LightGrey;
+            background-color: $SuperLightGrey;
+            color: $Accent1Colour;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        /**
+        * special fields several
+        */
+
+
+        input.password,
+        input.numeric,
+        input.file,
+        input.currency,
+        input.date {
+            max-width: 17em;
+            font-family: $MonoFont;
+        }
+
+
+        /**
+        * dropdown
+        */
+
+        .middleColumn select {
+            max-width: calc(40rem + 1.4em);
+            width: 100%;
+        }
+
+        .dropdown label.left {
+            padding-bottom: 3px;
+        }
+
+
+        /**
+        * textarea
+        */
+
+        .middleColumn textarea {
+            margin-top: 0px;
+        }
+
+
+        /**
+        * password
+        */
+
+        .confirmedpassword .middleColumn {
+            margin-left: 0px;
+        }
+
+        .confirmedpassword .middleColumn a {
+            display: block;
+        }
+
+
+
+        /**
+        * readonly
+        */
+
+        .readonly .middleColumn span {
+            display: block;
+            padding: 0.7em;
+            font-family: $MonoFont;
+            max-width: 40rem;
+            span {
+                padding: 0;
+                display: inline;
+            }
         }
     }
+
 
     //
     // /**
