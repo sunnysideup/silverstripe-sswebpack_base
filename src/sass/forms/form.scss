@@ -222,29 +222,6 @@
             color: $TextColour;
         }
 
-
-
-        .action,
-        .Actions input,
-        a.button,
-        input.action {
-            color: $TextColour;
-            padding: 1em;
-            border-radius: 50px;
-            text-decoration: none!important;
-            padding-right: 17px!important;
-            width: auto;
-            max-width: 200px;
-            text-align: center;
-            font-family: $TextFont;
-            font-weight: 700;
-            min-width: 5em;
-            display:block;
-            color: $White;
-            border: 1px solid $White;
-            background-color: $Accent1Colour;
-        }
-
         .action:hover,
         .action:focus,
         .Actions input:hover,
@@ -323,7 +300,26 @@
         }
     }
 
-
+    .action,
+    .Actions input,
+    a.button,
+    input.action {
+        color: $TextColour;
+        padding: 1em;
+        border-radius: 50px;
+        text-decoration: none!important;
+        padding-right: 17px!important;
+        width: auto;
+        max-width: 200px;
+        text-align: center;
+        font-family: $TextFont;
+        font-weight: 700;
+        min-width: 5em;
+        display:block;
+        color: $White;
+        border: 1px solid $White;
+        background-color: $Accent1Colour;
+    }
 
     .secondary-button {
         display: inline-block;
