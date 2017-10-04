@@ -255,25 +255,6 @@
             color: $Accent1Colour;
         }
 
-        .secondary-button {
-            display: inline-block;
-            color: $TextColour;
-            padding: 1em;
-            border-radius: 50px;
-            text-decoration: none!important;
-            padding-right: 17px!important;
-            width: auto;
-            text-align: center;
-            font-family: $TextFont;
-            font-weight: 700;
-            min-width: 5em;
-            border: 1px solid $LightGrey;
-            background-color: $SuperLightGrey;
-            color: $Accent1Colour;
-            margin-top: 1rem;
-            margin-bottom: 1rem;
-            max-width: 200px;
-        }
         /**
         * special fields several
         */
@@ -343,13 +324,28 @@
     }
 
 
-    //
-    // /**
-    // * mobile only!
-    // *
-    // */
-    //
-    //
+
+    .secondary-button {
+        display: inline-block;
+        color: $TextColour;
+        padding: 1em;
+        border-radius: 50px;
+        text-decoration: none!important;
+        padding-right: 17px!important;
+        width: auto;
+        text-align: center;
+        font-family: $TextFont;
+        font-weight: 700;
+        min-width: 5em;
+        border: 1px solid $LightGrey;
+        background-color: transparent;
+        color: $Accent1Colour;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        max-width: 200px;
+    }
+
+
 }
 
 
