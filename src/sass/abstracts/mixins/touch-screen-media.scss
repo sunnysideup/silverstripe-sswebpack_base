@@ -1,0 +1,5 @@
+@mixin touch() {
+    @media (-moz-touch-enabled: 1), (pointer:coarse) {
+        @content;
+    }
+ }
