@@ -243,6 +243,7 @@
         color: $White;
         border: 1px solid $White;
         background-color: $Accent1Colour;
+        max-width: 200px;
     }
 
     .action:hover,
@@ -272,6 +273,7 @@
         color: $Accent1Colour;
         margin-top: 1rem;
         margin-bottom: 1rem;
+        max-width: 200px;
     }
     /**
     * special fields several
