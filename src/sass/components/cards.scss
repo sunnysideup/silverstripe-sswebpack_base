@@ -6,29 +6,32 @@
         max-width: 100%;
         @include bp(min-md){
             grid-template-columns: 1fr 1fr;
-            grid-column-gap: 20px;
+            grid-column-gap: 2.5%;
             grid-row-gap: 20px;
         }
         @include bp(min-lg){
             grid-template-columns: 1fr 1fr 1fr;
-            grid-column-gap: 20px;
-            grid-row-gap: 20px
+            grid-column-gap: 2.5%;
+            grid-row-gap: 25px;
         }
         @include bp(min-xl){
             grid-template-columns: 1fr 1fr 1fr 1fr;
-            grid-column-gap: 20px;
-            grid-row-gap: 20px
+            grid-column-gap: 2.5%;
+            grid-row-gap: 30px;
         }
         > li {
             padding: 0;
-            margin: 0;
+            margin: 10px auto;
+            margin-bottom: 25px;
+            @include bp(min-md){
+                margin-bottom: 0px;
+            }
             list-style: none;
             border: 1px solid $LighterGrey;
             box-sizing: border-box;
             background-color: $White;
             border-radius: 5px;
             box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-            margin: 10px auto;
             max-width: 450px;
             width: 100%;
             &:before {
@@ -68,38 +71,52 @@
         }
         @include bp(min-xl){
             grid-template-columns: 1fr 1fr 1fr;
+            grid-column-gap: 25px;
+            grid-row-gap: 25px;
         }
     }
     .article-list.double {
         @include bp(min-sm){
             grid-template-columns: 1fr 1fr;
-            grid-column-gap: 20px;
+            grid-column-gap: 2.5%;
             grid-row-gap: 20px;
         }
         @include bp(min-md){
             grid-template-columns: 1fr 1fr 1fr;
+            grid-column-gap: 2.5%;
+            grid-row-gap: 25px;
         }
         @include bp(min-lg){
             grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-column-gap: 2.5%;
+            grid-row-gap: 30px;
         }
         @include bp(min-xl){
             grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            grid-column-gap: 2.5%;
+            grid-row-gap: 35px;
         }
     }
     .article-list.triple {
         @include bp(min-sm){
             grid-template-columns: 1fr 1fr 1fr;
-            grid-column-gap: 20px;
-            grid-row-gap: 20px;
+            grid-column-gap: 2.5%;
+            grid-row-gap: 25px;
         }
         @include bp(min-md){
             grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-column-gap: 2.5%;
+            grid-row-gap: 30px;
         }
         @include bp(min-lg){
             grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            grid-column-gap: 2.5%;
+            grid-row-gap: 35px;
         }
         @include bp(min-xl){
             grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-column-gap: 2.5%;
+            grid-row-gap: 40px;
         }
     }
 }
