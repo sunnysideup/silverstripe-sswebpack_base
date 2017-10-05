@@ -64,6 +64,7 @@ header {
         a.show-parent {
             border-bottom: none!important;
             margin-right: 5px;
+            padding: 4px 0 8px;
             i {
                 vertical-align: middle;
                 border: 1px solid $LightGrey;
@@ -91,7 +92,12 @@ header {
                         color: $Accent5Colour;
                     }
                 }
+                &.has-children {
+                    display: flex;
+                    align-items: center;
+                }
                 &.has-parent {
+                    @extend .has-children;
                     border-bottom: 1px solid $LightGrey;
                     margin-bottom: 1em;
                 }
