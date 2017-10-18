@@ -1,10 +1,10 @@
 <% include ColHolder_A %>
-
     <% if $hasSideBar %>
-    <% include Col1_A NumberOfColumns=seven %>
+        <% include Col1_A NumberOfColumns=seven %>
     <% else %>
-    <% include Col1_A NumberOfColumns=six,three %>
+        <% include Col1_A NumberOfColumns=six, Offset=three %>
     <% end_if %>
+
         <% include ContentSectionInner %>
         <% include FormSection %>
     <% include Col1_B %>
