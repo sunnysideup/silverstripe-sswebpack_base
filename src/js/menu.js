@@ -103,17 +103,12 @@ var basics = {
     },
 
     menuExpandListener: function(){
-        jQuery('#main-menu ul').find('li').each(
-            function(i, el) {
-                el = jQuery(el);
-            }
-        );
         jQuery('#main-menu').on(
             'click',
             'a.load-ajax-menu',
             function(e) {
-                event.preventDefault();
-                event.stopPropagation();
+                e.preventDefault();
+                e.stopPropagation();
                 var el = jQuery(this);
                 var target = el.closest('ul.my-menu-items');
                 var link = el.data('link');
