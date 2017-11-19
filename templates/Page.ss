@@ -10,16 +10,15 @@
     <header>
         <a href="/" class="home-button">$SiteConfig.Title</a>
         <% include Navigation %>
-        <a href="#" class="menu-button">menu</a>
-    </header
+    </header>
     <div id="Layout">
         <% include Breadcrumbs %>
         <div id="page-holder">
             <% include CallToAction %>
             $Layout
         </div>
-        <% include Footer %>
     </div>
+    <% include Footer %>
 </div>
 <% include WebpackJSLinks %>
 </body>

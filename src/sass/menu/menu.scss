@@ -10,20 +10,19 @@ header {
         top: 15px;
         height: 64px;
         width: 64px;
-        text-indent: -99999px;
         z-index: 3;
         background-size: contain;
         background-repeat: no-repeat;
     }
 
     a.home-button {
+        text-indent: -99999px;
         left: calc(15px + 1%);
         background-image: $LogoLarge;
         width: 253px;
     }
     a.menu-button {
         right: calc(15px + 1%);
-        background-image: url(/themes/webpacktheme/images/menu-buttonV2.png);
     }
     a.menu-button:hover {
         /*background-image: url(/themes/webpack_theme/images/menu-button.png);*/
