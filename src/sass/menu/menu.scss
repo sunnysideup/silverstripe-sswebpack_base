@@ -88,7 +88,8 @@ header {
                 }
                 &.section {
                     a {
-                        color: $Accent2Colour;
+                        color: #fff;
+                        border-bottom: 1px solid #fff;
                     }
                 }
                 &.has-children {
@@ -216,7 +217,7 @@ body.has-menu-overlay {
                         > li {
                             display: inline-block;
                             padding: 0px 20px 0 0;
-                            a {
+                            a, span {
                                 font-size: 1.1vw;
                                 font-weight: 400;
                                 &:hover {
@@ -235,9 +236,9 @@ body.has-menu-overlay {
                             }
                             &.section {
                                 a {
-                                    color: $Accent8Colour;
+                                    color: #fff;
                                     i.material-icons {
-                                        color: $Accent8Colour;
+                                        color: #fff;
                                     }
                                 }
                             }

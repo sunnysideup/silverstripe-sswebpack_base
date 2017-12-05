@@ -2,7 +2,7 @@
 .typography {
     font-family: $TextFont;
     font-size: 16px;
-    color: $TextColour;
+    color: #9e6b6b;
 
     /**
      * all
@@ -55,30 +55,14 @@
     section > h6:first-child,
     section > li:first-child,
     section > ul:first-child,
-    > div:first-child > h1:first-child,
-    > div:first-child > h2:first-child,
-    > div:first-child > h3:first-child,
-    > div:first-child > h4:first-child,
-    > div:first-child > h5:first-child,
-    > div:first-child > h6:first-child,
-    > div:first-child > li:first-child,
-    > div:first-child > ul:first-child,
-    > div:first-child > div:first-child > h1:first-child,
-    > div:first-child > div:first-child > h2:first-child,
-    > div:first-child > div:first-child > h3:first-child,
-    > div:first-child > div:first-child > h4:first-child,
-    > div:first-child > div:first-child > h5:first-child,
-    > div:first-child > div:first-child > h6:first-child,
-    > div:first-child > div:first-child > li:first-child,
-    > div:first-child > div:first-child > ul:first-child,
-    > div:first-child > div:first-child > div:first-child > h1:first-child,
-    > div:first-child > div:first-child > div:first-child > h2:first-child,
-    > div:first-child > div:first-child > div:first-child > h3:first-child,
-    > div:first-child > div:first-child > div:first-child > h4:first-child,
-    > div:first-child > div:first-child > div:first-child > h5:first-child,
-    > div:first-child > div:first-child > div:first-child > h6:first-child,
-    > div:first-child > div:first-child > div:first-child > li:first-child,
-    > div:first-child > div:first-child > div:first-child > ul:first-child          {
+    div:first-child > h1:first-child,
+    div:first-child > h2:first-child,
+    div:first-child > h3:first-child,
+    div:first-child > h4:first-child,
+    div:first-child > h5:first-child,
+    div:first-child > h6:first-child,
+    div:first-child > li:first-child,
+    div:first-child > ul:first-child  {
         padding-top: 0!important;
         margin-top: 0!important;
     }
