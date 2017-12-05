@@ -1,22 +1,64 @@
 
 header {
-    background-color: $MenuBarBackgroundColour;
     position: fixed;
     top: 0;
     right: 0;
     left: 0;
     height: calc(64px + 30px);
     z-index: 10;
-    * {
-        transition: all 0.3s ease 0s;
-        -webkit-transition: all 0.3s ease 0s;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $Accent2Colour;
+    background-color: $MenuBarBackgroundColour;
+    .container {
+        padding: 20px;
+        #site-heading {
+            display: block;
+            color: $Accent2Colour;
+            font-family: $HeaderFont;
+            font-size: 40px;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: 700;
+            transition: all 0.3s ease 0s;
+            -webkit-transition: all 0.3s ease 0s;
+        }
+
+        .tagline {
+            position: absolute;
+            bottom: 0;
+            color: $TextColour;
+            font-size: 20px;
+            text-transform: uppercase;
+            transition: all 0.3s ease 0s;
+            -webkit-transition: all 0.3s ease 0s;
+        }
     }
+
 }
 
 .scrolled {
     header {
+        width: 100%;
+        max-width: 100%;
         opacity: 0.3;
-        background-color: $Accent2Colour;
+        z-index: 1;
+        padding-bottom: 0;
+        border-bottom: none;
+        .container{
+            width: 100%;
+            max-width: 100%;
+            #site-heading {
+                display: none;
+                @include bp(min-xl) {
+                    font-size: 30px;
+                    color: #333;
+                    display: block;
+                }
+            }
+            .tagline {
+                display: none;
+            }
+        }
     }
 }
 
@@ -25,23 +67,28 @@ header {
     display: block;
     position: absolute;
     top: calc(64px + 30px + 15px);
-    right: calc(15px + 1%);
     z-index: 2;
-    padding: 0.5em;
-    margin-bottom: 20px;
-    color: $LightGrey;
     font-size: 14px;
-    @include background-opacity($Accent2Colour);
+    max-width: 1430px;
+    padding: 10px 20px;
+    margin: 0 auto;
+    right: calc(15px + 1%);
+    left: calc(15px + 1%);
+    background-color: transparent;
+    color: #333;
     a {
-        color: $Accent5Colour;
         text-decoration: none;
+        color: #333;
+        &:hover {
+            color: #fff;
+        }
     }
 }
-
-.empty-space {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    clear: both;
-    height: 5vh;
-}
+//
+// .empty-space {
+//     margin: 0;
+//     padding: 0;
+//     width: 100%;
+//     clear: both;
+//     height: 5vh;
+// }

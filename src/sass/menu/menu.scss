@@ -1,31 +1,16 @@
-
-body.scrolled header a.home-button {
-    background-image: $LogoSmall!important;
-}
-
 header {
     a.home-button,
     a.menu-button {
-        position: fixed;
-        top: 15px;
-        height: 32px;
-        width: 32px;
-        z-index: 3;
+        position: absolute;
+        z-index: 9999;
+        top: 20px;
+        right: 0;
+        height: 44px;
+        width: 44px;
         background-size: contain;
         background-repeat: no-repeat;
-    }
-
-    a.home-button {
-        text-indent: -99999px;
-        left: calc(15px + 1%);
-        background-image: $LogoLarge;
-        width: 253px;
-    }
-    a.menu-button {
-        right: calc(15px + 1%);
-    }
-    a.menu-button:hover {
-        /*background-image: url(/themes/webpack_theme/images/menu-button.png);*/
+        transition: all 0.3s ease 0s;
+        -webkit-transition: all 0.3s ease 0s;
     }
 
     a.close-menu {
@@ -46,12 +31,10 @@ header {
         bottom: 0;
         right: 0;
         width: 0;
-        background-color: $Accent2Colour;
-        color: $White;
-        z-index: 4;
-        padding: 2em 0;
-        opacity: 0.93;
         max-width: 400px;
+        padding: 2em 0;
+        background-color: green;
+        color: $White;
         z-index: 30;
         display: none;
         a  {
@@ -66,12 +49,6 @@ header {
             padding: 4px 0 8px;
             i {
                 vertical-align: middle;
-                border: 1px solid $LightGrey;
-                border-radius: 50%;
-                &:hover {
-                    background-color: $LightGrey;
-                    border-color: $White;
-                }
             }
         }
         ul {
@@ -79,17 +56,32 @@ header {
                 a {
                     padding: 0.3em 0em;
                     display: inline-block;
-                    border-bottom: 1px solid transparent;
+                    border-bottom: 4px solid transparent;
                 }
                 &.current {
-                    a {
-                        color: $Accent4Colour;
+                    a,
+                    a:hover{
+                        border-bottom: $thick-border;
                     }
                 }
                 &.section {
                     a {
+                        border-bottom: 4px solid #fff;
+                        &.has-parent {
+                            border-bottom: 4px solid #fff!important;
+                            a {
+                                border-bottom: 4px solid transparent!important;
+                            }
+                        }
                         color: #fff;
-                        border-bottom: 1px solid #fff;
+                        i {
+                            color: #fff;
+                            opacity: 0.5;
+                            &:hover {
+                                opacity: 1;
+                            }
+                        }
+
                     }
                 }
                 &.has-children {
@@ -98,23 +90,20 @@ header {
                 }
                 &.has-parent {
                     @extend .has-children;
-                    border-bottom: 1px solid $LightGrey;
-                    margin-bottom: 1em;
                 }
-            }
-            &.move-up {
-                bottom: 100px!important;
-            }
-            &.move-down {
-                bottom: 0px!important;
-                margin-bottom: -100px;
             }
         }
     }
 }
 
 
+/**
+ * overlay menu
+ */
+
 body.has-menu-overlay {
+    transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
     overflow: hidden;
     header nav {
         width: calc(39% - 1% - 15px);
@@ -132,14 +121,6 @@ body.has-menu-overlay {
     }
 }
 
-@include bp(min-sm) {
-    body header a.home-button {
-        background-image: $LogoLarge;
-    }
-    body.scrolled header a.home-button {
-        background-image: $LogoSmall;
-    }
-}
 
 
 
@@ -157,7 +138,6 @@ body.has-menu-overlay {
                     position: absolute;
                     padding: 0;
                     top: 0px;
-                    right: calc(15px + 1%);
                     left: 200px;
                     bottom: 0;
                     margin: 0;
@@ -166,36 +146,7 @@ body.has-menu-overlay {
                     background-color: transparent;
                     overflow: visible;
 
-                    #search-form {
-                        position: absolute;
-                        bottom: 10px;
-                        right: 0;
-                        width: 150px;
-                        padding: 0;
-                        margin: 0;
-                        form, fieldset {
-                            padding: 0;
-                            margin: 0;
-                            div {
-                                padding: 0;
-                                margin: 0;
-                            }
-                            i {
-                                color: #fff;
-                            }
-                            input {
-                                border: none;
-                                border-bottom: 1px solid #fff;
-                                background-color: transparent;
-                                outline: none;
-                                opacity: 0.3;
-                                color: #fff;
-                                &:focus {
-                                    opacity: 1;
-                                }
-                            }
-                        }
-                    }
+
                     a.close-menu {
                         display: none;
                     }
@@ -203,9 +154,8 @@ body.has-menu-overlay {
 
                     > ul {
                         position: absolute;
-                        bottom: 10px;
-                        right: 170px;
-                        left: 0;
+                        bottom: 0px;
+                        right: 0;
                         margin: 0;
                         padding: 0;
                         display: block;
@@ -217,31 +167,21 @@ body.has-menu-overlay {
                         > li {
                             display: inline-block;
                             padding: 0px 20px 0 0;
-                            a, span {
+                            a, span, a i {
                                 font-size: 1.1vw;
-                                font-weight: 400;
                                 &:hover {
                                     border-bottom: 1px solid $White;
                                 }
-                                @include bp(min-xl){
-                                    font-weight: 400;
+
+                            }
+                            a i {
+                                opacity: 0.5;
+                                &:hover{
+                                    border-bottom: 1px solid transparent;
+                                    opacity: 1;
                                 }
                             }
-                            &.current {
-                                a {
-                                    font-weight: 400!important;
-                                    border-bottom: 1px solid $White;
-                                    color: $White;
-                                }
-                            }
-                            &.section {
-                                a {
-                                    color: #fff;
-                                    i.material-icons {
-                                        color: #fff;
-                                    }
-                                }
-                            }
+
                             &.has-parent {
                                 border-bottom: none;
                                 margin-bottom: 0;
@@ -252,14 +192,6 @@ body.has-menu-overlay {
                             a.show-children,
                             a.show-parent {
                                 i {
-                                    color: $White;
-                                    border-color: $Accent4Colour;
-                                }
-                                &:hover {
-                                    i {
-                                        background-color: $Accent4Colour;
-                                        border-color: $White;
-                                    }
                                 }
                             }
                         }
@@ -276,12 +208,7 @@ body.has-menu-overlay {
         #Wrapper {
             header {
                 nav#main-menu {
-                    #search-form {
-                        position: absolute;
-                        bottom: 10px;
-                    }
                     > ul {
-                        right: 180px;
                         ul {
                             right: 0!important;
                         }
