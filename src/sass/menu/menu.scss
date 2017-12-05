@@ -66,9 +66,9 @@ header {
                 }
                 &.section {
                     a {
-                        border-bottom: 4px solid #fff;
+                        border-bottom: 4px solid #555;
                         &.has-parent {
-                            border-bottom: 4px solid #fff!important;
+                            border-bottom: 4px solid #555!important;
                             a {
                                 border-bottom: 4px solid transparent!important;
                             }
@@ -180,6 +180,10 @@ body.has-menu-overlay {
                                     border-bottom: 1px solid transparent;
                                     opacity: 1;
                                 }
+                            }
+                            a.show-children i {
+                                opacity: 1;
+                                color: orange;
                             }
 
                             &.has-parent {
