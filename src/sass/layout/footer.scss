@@ -24,7 +24,7 @@
         a.section,
         a.current,
         a:hover {
-            color: green;
+            color: $HZGreen;
         }
     }
     ul.menu-list li {
@@ -55,9 +55,7 @@
         }
     }
     h3 {
-        border-bottom: 1px dotted $LightGrey;
-        color: $LightGrey;
-        line-height: 2;
+        border-bottom: 2px solid #333;
         margin-bottom: 0.5em!important;
         clear: both;
     }

@@ -3,7 +3,7 @@ header {
     a.menu-button {
         position: absolute;
         z-index: 9999;
-        top: 20px;
+        top: 17px;
         right: 0;
         height: 44px;
         width: 44px;
@@ -33,7 +33,7 @@ header {
         width: 0;
         max-width: 400px;
         padding: 2em 0;
-        background-color: green;
+        background-color: $HZNavy;
         color: $White;
         z-index: 30;
         display: none;
@@ -46,7 +46,6 @@ header {
         a.show-parent {
             border-bottom: none!important;
             margin-right: 5px;
-            padding: 4px 0 8px;
             i {
                 vertical-align: middle;
             }
@@ -54,7 +53,7 @@ header {
         ul {
             li {
                 a {
-                    padding: 0.3em 0em;
+                    padding-bottom: 0.5em;
                     display: inline-block;
                     border-bottom: 4px solid transparent;
                 }
@@ -66,12 +65,10 @@ header {
                 }
                 &.section {
                     a {
-                        border-bottom: 4px solid #555;
+                        color: $HZPinky;
+                        border-bottom: 4px solid $HZPinky;
                         &.has-parent {
-                            border-bottom: 4px solid #555!important;
-                            a {
-                                border-bottom: 4px solid transparent!important;
-                            }
+                            border-bottom: 4px solid $HZPinky!important;
                         }
                         color: #fff;
                         i {
@@ -83,13 +80,6 @@ header {
                         }
 
                     }
-                }
-                &.has-children {
-                    display: flex;
-                    align-items: center;
-                }
-                &.has-parent {
-                    @extend .has-children;
                 }
             }
         }
@@ -105,19 +95,31 @@ body.has-menu-overlay {
     transition: all 0.3s ease 0s;
     -webkit-transition: all 0.3s ease 0s;
     overflow: hidden;
-    header nav {
-        width: calc(39% - 1% - 15px);
-        padding: calc(15px + 1%);
-        min-width: 200px;
-        max-width: 100%;
-        overflow-y: auto;
-        display: block;
-        @include bp(min-md){
-            max-width: 400px;
+    header {
+        a.menu-button.open {
+            opacity: 0;
         }
-    }
-    a.menu-button.open {
-        opacity: 0;
+        nav {
+            width: calc(39% - 1% - 15px);
+            padding: calc(15px + 1%);
+            min-width: 200px;
+            max-width: 100%;
+            overflow-y: auto;
+            display: block;
+            @include bp(min-md){
+                max-width: 400px;
+            }
+            ul li a {
+                margin: 0.5em 0em;
+            }
+            a.load-ajax-menu {
+                float: right!important;
+                i{
+                    vertical-align: baseline;
+                }
+            }
+            li {clear: right;}
+        }
     }
 }
 
@@ -138,7 +140,7 @@ body.has-menu-overlay {
                     position: absolute;
                     padding: 0;
                     top: 0px;
-                    left: 200px;
+                    left: 450px;
                     bottom: 0;
                     margin: 0;
                     width: auto;
@@ -157,6 +159,7 @@ body.has-menu-overlay {
                         bottom: 0px;
                         right: 0;
                         margin: 0;
+                        margin-bottom: -4px;
                         padding: 0;
                         display: block;
                         text-align: center;
@@ -168,7 +171,7 @@ body.has-menu-overlay {
                             display: inline-block;
                             padding: 0px 20px 0 0;
                             a, span, a i {
-                                font-size: 1.1vw;
+                                font-size: calc(5px + 1vw);
                                 &:hover {
                                     border-bottom: 1px solid $White;
                                 }
@@ -182,8 +185,7 @@ body.has-menu-overlay {
                                 }
                             }
                             a.show-children i {
-                                opacity: 1;
-                                color: orange;
+                                color: #fff;
                             }
 
                             &.has-parent {
