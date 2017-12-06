@@ -89,21 +89,20 @@
         .middleColumn select:focus {
             color: $White;
             outline: none!important;
-            font-family: $MonoFont;
         }
-
-        input[type=text]:focus,
-        input[type=email]:focus,
-        input[type=password]:focus,
-        textarea:focus,
-        select:focus{
-            background-color: $Accent1OppositeColour;
-            border-top: 1px solid $LighterGrey;
-            border-right: 1px solid $LighterGrey;
-            margin-top: -5px!important;
-            margin-bottom: -5px!important;
-            display: block;
-        }
+        //
+        // input[type=text]:focus,
+        // input[type=email]:focus,
+        // input[type=password]:focus,
+        // textarea:focus,
+        // select:focus{
+        //     background-color: $Accent1OppositeColour;
+        //     border-top: 1px solid $LighterGrey;
+        //     border-right: 1px solid $LighterGrey;
+        //     margin-top: -5px!important;
+        //     margin-bottom: -5px!important;
+        //     display: block;
+        // }
 
         /**
         * labels

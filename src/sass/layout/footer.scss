@@ -7,7 +7,6 @@
     .footer-col {
         clear: both;
         font-size: 1.5em;
-        padding-top: 2em;
         ul, li {
             padding-left: 0;
             margin-left: 0;
@@ -21,9 +20,10 @@
             color: $White;
             text-decoration: none;
         }
-        a.section,
-        a.current,
-        a:hover {
+        a.section {
+            color: $HZPinky;
+        }
+        a.current{
             color: $HZGreen;
         }
     }
@@ -55,10 +55,13 @@
         }
     }
     h3 {
-        border-bottom: 2px solid #333;
+        border-bottom: 2px solid $HZGreen;
         margin-bottom: 0.5em!important;
         clear: both;
+        margin-top: 0;
+        padding-top: 2em;
     }
+
 }
 
 
