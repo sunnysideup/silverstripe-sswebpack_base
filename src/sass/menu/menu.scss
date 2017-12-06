@@ -172,6 +172,9 @@ body.has-menu-overlay {
                             padding: 0px 20px 0 0;
                             a, span, a i {
                                 font-size: calc(5px + 1vw);
+                                @include bp(min-xl) {
+                                    font-size: 20px;
+                                }
                                 &:hover {
                                     border-bottom: 1px solid $White;
                                 }

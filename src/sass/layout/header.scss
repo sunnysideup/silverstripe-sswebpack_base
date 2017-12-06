@@ -33,9 +33,8 @@ header {
             position: absolute;
             bottom: 0;
             color: $TextColour;
-            font-size: 10px;
+            font-size: 15px;
             @include bp(min-sm) {
-                font-size: 15px;
             }
             @include bp(min-md) {
                 font-size: 20px;
@@ -76,8 +75,11 @@ header {
 
 
 #Breadcrumbs {
+    display: none;
+    @include bp(min-sm) {
+        display: block;
+    }
     opacity: 0.5;
-    display: block;
     position: absolute;
     top: calc(64px + 30px + 15px);
     z-index: 2;
@@ -95,6 +97,9 @@ header {
         &:hover {
             color: #fff;
         }
+    }
+    &:hover {
+        opacity: 1;
     }
 }
 .scrolled #Breadcrumbs {
