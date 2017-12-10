@@ -9,8 +9,6 @@ header {
         width: 44px;
         background-size: contain;
         background-repeat: no-repeat;
-        transition: all 0.3s ease 0s;
-        -webkit-transition: all 0.3s ease 0s;
     }
 
     a.close-menu {
@@ -24,8 +22,6 @@ header {
     }
 
     nav {
-        /*transition: all 0.2s ease-out 0.2s;
-        -webkit-transition: all 0.2s ease-out 0.2s;*/
         position: fixed;
         top: 0;
         bottom: 0;
@@ -65,7 +61,7 @@ header {
                 }
                 &.section {
                     a {
-                        color: $HZPinky;
+                        color: $HZPinky!important;
                         border-bottom: 4px solid $HZPinky;
                         &.has-parent {
                             border-bottom: 4px solid $HZPinky!important;
@@ -92,8 +88,6 @@ header {
  */
 
 body.has-menu-overlay {
-    transition: all 0.3s ease 0s;
-    -webkit-transition: all 0.3s ease 0s;
     overflow: hidden;
     header {
         a.menu-button.open {
@@ -170,20 +164,22 @@ body.has-menu-overlay {
                         > li {
                             display: inline-block;
                             padding: 0px 20px 0 0;
+                            a {
+                                &:hover {
+                                    border-top: 4px solid $White;
+                                }
+                            }
                             a, span, a i {
                                 font-size: calc(5px + 1vw);
                                 @include bp(min-xl) {
                                     font-size: 20px;
-                                }
-                                &:hover {
-                                    border-bottom: 1px solid $White;
                                 }
 
                             }
                             a i {
                                 opacity: 0.5;
                                 &:hover{
-                                    border-bottom: 1px solid transparent;
+                                    border-bottom: 4px solid transparent;
                                     opacity: 1;
                                 }
                             }

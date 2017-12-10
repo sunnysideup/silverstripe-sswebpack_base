@@ -142,7 +142,7 @@
     em,
     i,
     u {
-        color: $Accent2Colour;
+        color: orange;
         font-style: normal;
         font-weight: normal;
         text-decoration: none;
@@ -150,16 +150,10 @@
     strong,
     b {
         font-weight: 700;
+        color: #ef5c2b;
     }
 
-
-    em,
-    em a,
-    i {
-        color: $LightGrey;
-    }
     u {
-        border-bottom: 1px dotted $Accent2Colour;
         text-decoration: underline double;
     }
 

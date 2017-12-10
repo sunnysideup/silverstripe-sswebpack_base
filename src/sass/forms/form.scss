@@ -5,7 +5,6 @@
     form {
         * {
             transition: all 0.3s ease 0s;
-            -webkit-transition: all 0.3s ease 0s;
         }
         padding: 1em;
         clear: both;
@@ -66,6 +65,7 @@
             color: #000;
             max-width: 40rem;
             font-size: 16px!important;
+            border-radius: 4px;
         }
 
         input[type=text],
