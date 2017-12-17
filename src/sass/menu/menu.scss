@@ -1,31 +1,14 @@
-
-body.scrolled header a.home-button {
-    background-image: $LogoSmall!important;
-}
-
 header {
     a.home-button,
     a.menu-button {
-        position: fixed;
-        top: 15px;
-        height: 64px;
-        width: 64px;
-        z-index: 3;
+        position: absolute;
+        z-index: 9999;
+        top: 17px;
+        right: 0;
+        height: 44px;
+        width: 44px;
         background-size: contain;
         background-repeat: no-repeat;
-    }
-
-    a.home-button {
-        text-indent: -99999px;
-        left: calc(15px + 1%);
-        background-image: $LogoLarge;
-        width: 253px;
-    }
-    a.menu-button {
-        right: calc(15px + 1%);
-    }
-    a.menu-button:hover {
-        /*background-image: url(/themes/webpack_theme/images/menu-button.png);*/
     }
 
     a.close-menu {
@@ -39,19 +22,15 @@ header {
     }
 
     nav {
-        /*transition: all 0.2s ease-out 0.2s;
-        -webkit-transition: all 0.2s ease-out 0.2s;*/
         position: fixed;
         top: 0;
         bottom: 0;
         right: 0;
         width: 0;
-        background-color: $Accent2Colour;
-        color: $White;
-        z-index: 4;
-        padding: 2em 0;
-        opacity: 0.93;
         max-width: 400px;
+        padding: 2em 0;
+        background-color: $HZNavy;
+        color: $White;
         z-index: 30;
         display: none;
         a  {
@@ -63,82 +42,99 @@ header {
         a.show-parent {
             border-bottom: none!important;
             margin-right: 5px;
-            padding: 4px 0 8px;
             i {
                 vertical-align: middle;
-                border: 1px solid $LightGrey;
-                border-radius: 50%;
-                &:hover {
-                    background-color: $LightGrey;
-                    border-color: $White;
-                }
             }
         }
         ul {
             li {
                 a {
-                    padding: 0.3em 0em;
+                    padding-bottom: 0.5em;
                     display: inline-block;
-                    border-bottom: 1px solid transparent;
+                    border-bottom: $thick-border-transparent;
+                    i {
+                        opacity: 0.5;
+                        &:hover{
+                            border-bottom: 4px solid transparent;
+                            opacity: 1;
+                        }
+                    }                
                 }
                 &.current {
                     a {
-                        color: $Accent4Colour;
+                        color: $HZNavy;
+                    }
+                    a,
+                    a:hover{
+                        border-bottom: $thick-border;
+                        border-color: $HZNavy;
                     }
                 }
                 &.section {
                     a {
-                        color: $Accent2Colour;
+                        border-bottom: $thick-border;
+                        &.has-parent {
+                            border-bottom: $thick-border;
+                        }
+                        color: #fff;
+                        opacity: 0.5;
+                        &:hover {
+                            opacity: 1;
+                        }
+                        i {
+                            color: #fff;
+                        }
+
                     }
                 }
-                &.has-children {
-                    display: flex;
-                    align-items: center;
-                }
-                &.has-parent {
-                    @extend .has-children;
-                    border-bottom: 1px solid $LightGrey;
-                    margin-bottom: 1em;
-                }
-            }
-            &.move-up {
-                bottom: 100px!important;
-            }
-            &.move-down {
-                bottom: 0px!important;
-                margin-bottom: -100px;
             }
         }
     }
 }
 
+
+/**
+ * overlay menu
+ */
 
 body.has-menu-overlay {
     overflow: hidden;
-    header nav {
-        width: calc(39% - 1% - 15px);
-        padding: calc(15px + 1%);
-        min-width: 200px;
-        max-width: 100%;
-        overflow-y: auto;
-        display: block;
-        @include bp(min-md){
-            max-width: 400px;
+    header {
+        a.menu-button.open {
+            opacity: 0;
         }
-    }
-    a.menu-button.open {
-        opacity: 0;
+        nav {
+            z-index: 999;
+            width: calc(39% - 1% - 15px);
+            padding: calc(15px + 1%);
+            min-width: 200px;
+            max-width: 100%;
+            overflow-y: auto;
+            display: block;
+            border-left: $thick-border;
+            border-color: #fff;
+            @include bp(min-md){
+                max-width: 400px;
+            }
+            ul {
+                padding-top: 1rem;
+                border-top: $thick-border;
+                border-bottom: $thick-border;
+            }
+            ul li a {
+                margin: 0.5em 0em;
+            }
+            a.load-ajax-menu {
+                float: right!important;
+                i{
+                    vertical-align: baseline;
+                }
+            }
+            li {clear: right;}
+        }
     }
 }
 
-@include bp(min-sm) {
-    body header a.home-button {
-        background-image: $LogoLarge;
-    }
-    body.scrolled header a.home-button {
-        background-image: $LogoSmall;
-    }
-}
 
 
 
@@ -156,8 +152,7 @@ body.has-menu-overlay {
                     position: absolute;
                     padding: 0;
                     top: 0px;
-                    right: calc(15px + 1%);
-                    left: 200px;
+                    left: 450px;
                     bottom: 0;
                     margin: 0;
                     width: auto;
@@ -165,36 +160,7 @@ body.has-menu-overlay {
                     background-color: transparent;
                     overflow: visible;
 
-                    #search-form {
-                        position: absolute;
-                        bottom: 10px;
-                        right: 0;
-                        width: 150px;
-                        padding: 0;
-                        margin: 0;
-                        form, fieldset {
-                            padding: 0;
-                            margin: 0;
-                            div {
-                                padding: 0;
-                                margin: 0;
-                            }
-                            i {
-                                color: #fff;
-                            }
-                            input {
-                                border: none;
-                                border-bottom: 1px solid #fff;
-                                background-color: transparent;
-                                outline: none;
-                                opacity: 0.3;
-                                color: #fff;
-                                &:focus {
-                                    opacity: 1;
-                                }
-                            }
-                        }
-                    }
+
                     a.close-menu {
                         display: none;
                     }
@@ -202,10 +168,10 @@ body.has-menu-overlay {
 
                     > ul {
                         position: absolute;
-                        bottom: 10px;
-                        right: 170px;
-                        left: 0;
+                        bottom: 0px;
+                        right: 0;
                         margin: 0;
+                        margin-bottom: -4px;
                         padding: 0;
                         display: block;
                         text-align: center;
@@ -217,30 +183,22 @@ body.has-menu-overlay {
                             display: inline-block;
                             padding: 0px 20px 0 0;
                             a {
-                                font-size: 1.1vw;
-                                font-weight: 400;
                                 &:hover {
-                                    border-bottom: 1px solid $White;
-                                }
-                                @include bp(min-xl){
-                                    font-weight: 400;
+                                    border-color: $HZDarkOrange;
                                 }
                             }
-                            &.current {
-                                a {
-                                    font-weight: 400!important;
-                                    border-bottom: 1px solid $White;
-                                    color: $White;
+                            a, span, a i {
+                                font-size: calc(5px + 1vw);
+                                @include bp(min-xl) {
+                                    font-size: 20px;
                                 }
+
                             }
-                            &.section {
-                                a {
-                                    color: $Accent8Colour;
-                                    i.material-icons {
-                                        color: $Accent8Colour;
-                                    }
-                                }
+
+                            a.show-children i {
+                                color: #fff;
                             }
+
                             &.has-parent {
                                 border-bottom: none;
                                 margin-bottom: 0;
@@ -251,14 +209,6 @@ body.has-menu-overlay {
                             a.show-children,
                             a.show-parent {
                                 i {
-                                    color: $White;
-                                    border-color: $Accent4Colour;
-                                }
-                                &:hover {
-                                    i {
-                                        background-color: $Accent4Colour;
-                                        border-color: $White;
-                                    }
                                 }
                             }
                         }
@@ -275,12 +225,7 @@ body.has-menu-overlay {
         #Wrapper {
             header {
                 nav#main-menu {
-                    #search-form {
-                        position: absolute;
-                        bottom: 10px;
-                    }
                     > ul {
-                        right: 180px;
                         ul {
                             right: 0!important;
                         }

@@ -5,7 +5,6 @@
     form {
         * {
             transition: all 0.3s ease 0s;
-            -webkit-transition: all 0.3s ease 0s;
         }
         padding: 1em;
         clear: both;
@@ -66,6 +65,7 @@
             color: #000;
             max-width: 40rem;
             font-size: 16px!important;
+            border-radius: 4px;
         }
 
         input[type=text],
@@ -89,21 +89,20 @@
         .middleColumn select:focus {
             color: $White;
             outline: none!important;
-            font-family: $MonoFont;
         }
-
-        input[type=text]:focus,
-        input[type=email]:focus,
-        input[type=password]:focus,
-        textarea:focus,
-        select:focus{
-            background-color: $Accent1OppositeColour;
-            border-top: 1px solid $LighterGrey;
-            border-right: 1px solid $LighterGrey;
-            margin-top: -5px!important;
-            margin-bottom: -5px!important;
-            display: block;
-        }
+        //
+        // input[type=text]:focus,
+        // input[type=email]:focus,
+        // input[type=password]:focus,
+        // textarea:focus,
+        // select:focus{
+        //     background-color: $Accent1OppositeColour;
+        //     border-top: 1px solid $LighterGrey;
+        //     border-right: 1px solid $LighterGrey;
+        //     margin-top: -5px!important;
+        //     margin-bottom: -5px!important;
+        //     display: block;
+        // }
 
         /**
         * labels
@@ -223,8 +222,8 @@
         .Actions input:hover,
         input.action:hover {
             text-decoration: none;
-            border: 1px solid green;
-            background-color: green;
+            border: 1px solid $HZGreen;
+            background-color: $HZGreen;
             color: white;
         }
 

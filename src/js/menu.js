@@ -147,7 +147,7 @@ var basics = {
      doScroll: function () {
          basics.runningScroll = true;
          var scrollHeight = jQuery(window).scrollTop();
-         if(parseInt(scrollHeight) > parseInt(basics.headerHeight)) {
+         if(parseInt(scrollHeight) > parseInt(basics.headerHeight) - 90) {
              jQuery('body')
                 .addClass('scrolled')
                 .removeClass('not-scrolled');

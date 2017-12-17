@@ -18,7 +18,7 @@ html {
 body {
     min-height: 100%;
     font-family: $TextFont;
-    background-color: $BackgroundColour;
+    background-color: $HZNavy;
 }
 
 #Wrapper {
@@ -28,7 +28,7 @@ body {
 
 
 #page-holder {
-    padding-top: calc(64px + 30px + 40px);
+    padding-top: calc(64px + 30px + 10px);
     min-height: 600px;
 }
 
@@ -74,12 +74,13 @@ body {
 
 @media screen and (min-width: 1000px) {
     .container {
-        padding-top: 30px;
+        padding-top: 0px;
     }
 }
 @media screen and (min-width: 1550px) {
     .container {
         padding-top: 50px;
+        padding-bottom: 50px;
     }
 
 }

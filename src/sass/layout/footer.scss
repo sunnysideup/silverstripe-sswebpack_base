@@ -1,13 +1,14 @@
 #footer {
+    background-color: $MenuBarBackgroundColour;
+    color: $White;
     position: relative;
     clear: both;
     padding: 0 calc(15px + 1%) 0;
-    background-color: $FooterBackgroundColour;
-    color: $White;
     .footer-col {
         clear: both;
-        font-size: 1.5em;
-        padding-top: 2em;
+        @include bp(min-lg) {
+            font-size: 1.5em;
+        }
         ul, li {
             padding-left: 0;
             margin-left: 0;
@@ -16,15 +17,15 @@
                 content: '';
             }
         }
-        h4,
         a {
             color: $White;
             text-decoration: none;
         }
-        a.section,
-        a.current,
-        a:hover {
-            color: green;
+        a.section {
+            color: $HZPinky;
+        }
+        a.current{
+            color: $HZGreen;
         }
     }
     ul.menu-list li {
@@ -55,19 +56,22 @@
         }
     }
     h3 {
-        border-bottom: 1px dotted $LightGrey;
-        color: $FooterHeaderColour;
-        border-bottom: 1px solid $White;
-
-        line-height: 2;
+        border-bottom: 2px solid $HZGreen;
         margin-bottom: 0.5em!important;
         clear: both;
+        margin-top: 0;
+        padding-top: 2em;
+        font-size: 14px;
+        @include bp(min-lg){
+            font-size: 20px;
+        }
     }
     video {
         width: 100%!important;
         display: block;
         height: auto;
     }
+
 }
 
 
