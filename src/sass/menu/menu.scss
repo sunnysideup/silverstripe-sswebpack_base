@@ -51,28 +51,38 @@ header {
                 a {
                     padding-bottom: 0.5em;
                     display: inline-block;
-                    border-bottom: 4px solid transparent;
+                    border-bottom: $thick-border-transparent;
+                    i {
+                        opacity: 0.5;
+                        &:hover{
+                            border-bottom: 4px solid transparent;
+                            opacity: 1;
+                        }
+                    }                
                 }
                 &.current {
+                    a {
+                        color: $HZNavy;
+                    }
                     a,
                     a:hover{
                         border-bottom: $thick-border;
+                        border-color: $HZNavy;
                     }
                 }
                 &.section {
                     a {
-                        color: $HZPinky!important;
-                        border-bottom: 4px solid $HZPinky;
+                        border-bottom: $thick-border;
                         &.has-parent {
-                            border-bottom: 4px solid $HZPinky!important;
+                            border-bottom: $thick-border;
                         }
                         color: #fff;
+                        opacity: 0.5;
+                        &:hover {
+                            opacity: 1;
+                        }
                         i {
                             color: #fff;
-                            opacity: 0.5;
-                            &:hover {
-                                opacity: 1;
-                            }
                         }
 
                     }
@@ -94,14 +104,22 @@ body.has-menu-overlay {
             opacity: 0;
         }
         nav {
+            z-index: 999;
             width: calc(39% - 1% - 15px);
             padding: calc(15px + 1%);
             min-width: 200px;
             max-width: 100%;
             overflow-y: auto;
             display: block;
+            border-left: $thick-border;
+            border-color: #fff;
             @include bp(min-md){
                 max-width: 400px;
+            }
+            ul {
+                padding-top: 1rem;
+                border-top: $thick-border;
+                border-bottom: $thick-border;
             }
             ul li a {
                 margin: 0.5em 0em;
@@ -166,7 +184,7 @@ body.has-menu-overlay {
                             padding: 0px 20px 0 0;
                             a {
                                 &:hover {
-                                    border-top: 4px solid $White;
+                                    border-color: $HZDarkOrange;
                                 }
                             }
                             a, span, a i {
@@ -176,13 +194,7 @@ body.has-menu-overlay {
                                 }
 
                             }
-                            a i {
-                                opacity: 0.5;
-                                &:hover{
-                                    border-bottom: 4px solid transparent;
-                                    opacity: 1;
-                                }
-                            }
+
                             a.show-children i {
                                 color: #fff;
                             }

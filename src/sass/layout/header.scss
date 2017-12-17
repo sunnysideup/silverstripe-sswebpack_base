@@ -7,13 +7,14 @@ header {
     height: calc(64px + 30px);
     z-index: 10;
     padding-bottom: 10px;
-    border-bottom: 2px solid #fff;
-    background-color: #ad1108;
+    border-bottom: 2px solid rgba(255,255,255,0.5);
+    // background-color: #ad1108;
+    background-color: $HZOrange;
     .container {
         padding: 20px;
         #site-heading {
             display: block;
-            color: #ef5c2b;
+            color: $HZDarkOrange;
             font-family: $HeaderFont;
             font-size: 20px;
             @include bp(min-sm) {
@@ -88,26 +89,23 @@ header {
     right: calc(15px + 1%);
     left: calc(15px + 1%);
     background-color: transparent;
-    color: $HZPinky;
+    color: #fff;
     a {
+        color: #fff;
         text-decoration: none;
-        color: $HZPinky;
-        &:hover {
-            color: #fff;
-        }
-    }
-    &:hover {
-        opacity: 1;
     }
 }
 .scrolled {
-
     #Breadcrumbs {
         display: none;
     }
 }
 
-.scrolled, .not-scrolled {
+
+// only apply once these classes have been added ... 
+
+.scrolled,
+.not-scrolled {
     header {
         transition: all 0.3s ease 0s;
         -webkit-transition: all 0.3s ease 0s;
