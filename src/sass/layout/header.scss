@@ -9,12 +9,12 @@ header {
     padding-bottom: 10px;
     border-bottom: 2px solid rgba(255,255,255,0.5);
     // background-color: #ad1108;
-    background-color: $HZOrange;
+    background-color: $MenuBarBackgroundColour;
     .container {
         padding: 20px;
         #site-heading {
             display: block;
-            color: $HZDarkOrange;
+            color: $HZNavy;
             font-family: $HeaderFont;
             font-size: 20px;
             @include bp(min-sm) {
@@ -102,7 +102,7 @@ header {
 }
 
 
-// only apply once these classes have been added ... 
+// only apply once these classes have been added ...
 
 .scrolled,
 .not-scrolled {
