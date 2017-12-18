@@ -7,14 +7,14 @@ header {
     height: calc(64px + 30px);
     z-index: 10;
     padding-bottom: 10px;
-    border-bottom: 2px solid rgba(255,255,255,0.5);
+    border-bottom: 2px solid $White;
     // background-color: #ad1108;
     background-color: $MenuBarBackgroundColour;
     .container {
         padding: 20px;
         #site-heading {
             display: block;
-            color: $ThemeLightOrange;
+            color: $ThemeRed;
             font-family: $HeaderFont;
             font-size: 20px;
             @include bp(min-sm) {
@@ -31,7 +31,7 @@ header {
         .tagline {
             position: absolute;
             bottom: 0;
-            color: $TextColour;
+            color: $White;
             font-size: 15px;
             @include bp(min-sm) {
             }
