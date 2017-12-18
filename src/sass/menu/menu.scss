@@ -29,7 +29,7 @@ header {
         width: 0;
         max-width: 400px;
         padding: 2em 0;
-        background-color: $HZNavy;
+        background-color: $ThemeNavy;
         color: $White;
         z-index: 30;
         display: none;
@@ -58,16 +58,16 @@ header {
                             border-bottom: 4px solid transparent;
                             opacity: 1;
                         }
-                    }                
+                    }
                 }
                 &.current {
                     a {
-                        color: $HZNavy;
+                        color: $ThemeNavy;
                     }
                     a,
                     a:hover{
                         border-bottom: $thick-border;
-                        border-color: $HZNavy;
+                        border-color: $ThemeNavy;
                     }
                 }
                 &.section {
@@ -92,18 +92,39 @@ header {
     }
 }
 
+.menu-button {
+    svg {
+        fill: $ThemeDarkOrange;
+    }
+}
 
 /**
  * overlay menu
  */
 
+ body.scrolled {
+     .menu-button {
+         position: fixed;
+         z-index: 9999;
+         right: 20px;
+         svg {
+             width: 32px;
+             height: 32px;
+             fill: #fff!important;
+         }
+     }
+ }
+
 body.has-menu-overlay {
     overflow: hidden;
     header {
+        opacity: 1;
         a.menu-button.open {
             opacity: 0;
         }
         nav {
+            background-color: $ThemeGreen;
+            opacity: 1;
             z-index: 999;
             width: calc(39% - 1% - 15px);
             padding: calc(15px + 1%);
@@ -130,7 +151,31 @@ body.has-menu-overlay {
                     vertical-align: baseline;
                 }
             }
-            li {clear: right;}
+            li {
+                clear: right;
+                a {
+                    border: none!important;
+                }
+                &.section {
+                    a {
+                        color: $ThemeBlue;
+                    }
+                }
+                &:hover {
+                    a {
+                        color: $ThemeBlue;
+                    }
+
+                }
+                &.current {
+                    a {
+                        color: $ThemeNavy;
+                    }
+                }
+                &.has-parent {
+                    margin-bottom: 1em;
+                }
+            }
         }
     }
 }
@@ -184,7 +229,7 @@ body.has-menu-overlay {
                             padding: 0px 20px 0 0;
                             a {
                                 &:hover {
-                                    border-color: $HZDarkOrange;
+                                    border-color: $ThemeDarkOrange;
                                 }
                             }
                             a, span, a i {

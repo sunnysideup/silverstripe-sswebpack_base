@@ -9,12 +9,12 @@ header {
     padding-bottom: 10px;
     border-bottom: 2px solid rgba(255,255,255,0.5);
     // background-color: #ad1108;
-    background-color: $HZOrange;
+    background-color: $ThemeOrange;
     .container {
         padding: 20px;
         #site-heading {
             display: block;
-            color: $HZDarkOrange;
+            color: $ThemeDarkOrange;
             font-family: $HeaderFont;
             font-size: 20px;
             @include bp(min-sm) {
@@ -38,7 +38,7 @@ header {
             @include bp(min-md) {
                 font-size: 20px;
             }
-            text-transform: uppercase;
+            text-transform: lowercase;
             transition: all 0.3s ease 0s;
             -webkit-transition: all 0.3s ease 0s;
         }
@@ -53,7 +53,8 @@ header {
         opacity: 0.5;
         z-index: 1;
         padding-bottom: 0;
-        border-bottom: 1px solid #fff;
+        border-bottom: 1px solid $White;
+        background-image: none;
         .container{
             width: 100%;
             max-width: 100%;
@@ -102,7 +103,7 @@ header {
 }
 
 
-// only apply once these classes have been added ... 
+// only apply once these classes have been added ...
 
 .scrolled,
 .not-scrolled {
