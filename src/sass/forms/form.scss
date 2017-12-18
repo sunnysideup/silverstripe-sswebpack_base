@@ -3,6 +3,8 @@
 */
 .typography {
     form {
+        background-color: $ThemeGreen;
+        border-radius: 5px;
         * {
             transition: all 0.3s ease 0s;
         }
@@ -59,10 +61,7 @@
         .middleColumn span.readonly {
             position: relative;
             background-color: $White;
-            border-top: 1px solid transparent;
-            border-right: 1px solid transparent;
-            border-bottom: 1px solid $LighterGrey;
-            border-left: 1px solid $LighterGrey;
+            border: 1px solid $White;
             padding: 0.7em;
             margin-top: 0px;
             width: calc(100% - 1.4em);
@@ -131,8 +130,8 @@
         }
 
         label.left {
+            border: none;
             display: inline-block;
-            border-bottom: 1px solid $LighterGrey;
             color: $TextColour;
         }
 
@@ -345,7 +344,7 @@
         font-family: $TextFont;
         font-weight: 700;
         min-width: 5em;
-        border: 1px solid $LightGrey;
+        border: 1px solid $White;
         background-color: transparent;
         margin-top: 1rem;
         margin-bottom: 1rem;
