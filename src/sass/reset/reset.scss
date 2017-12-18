@@ -59,8 +59,8 @@ input[type="radio"] { vertical-align: text-bottom; }
 input[type="checkbox"] { vertical-align: bottom; }
 .ie6 input { vertical-align: text-bottom; }
 label, input[type=button], input[type=submit], button { cursor: pointer; }
-::-moz-selection{ background: #0051dc; color:$White; text-shadow: none; }
-::selection { background: #0051dc; color:$White; text-shadow: none; }
+::-moz-selection{ background: #0051dc; color: $White; text-shadow: none; }
+::selection { background: #0051dc; color: $White; text-shadow: none; }
 a:link { -webkit-tap-highlight-color: #5ec1ff; }
 button {  width: auto; overflow: visible; }
 .ie7 img { -ms-interpolation-mode: bicubic; }

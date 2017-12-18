@@ -62,7 +62,7 @@ header {
                 display: none;
                 @include bp(min-xl) {
                     font-size: 30px;
-                    color: #fff;
+                    color: $White;
                     display: block;
                 }
             }
@@ -90,9 +90,9 @@ header {
     right: calc(15px + 1%);
     left: calc(15px + 1%);
     background-color: transparent;
-    color: #fff;
+    color: $White;
     a {
-        color: #fff;
+        color: $White;
         text-decoration: none;
     }
 }
