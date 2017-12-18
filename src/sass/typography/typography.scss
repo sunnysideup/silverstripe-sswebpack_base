@@ -1,6 +1,7 @@
 
 .typography {
     font-family: $TextFont;
+    color: $White;
     font-size: 20px;
     letter-spacing: 1px;
     hyphens: auto;
@@ -189,7 +190,7 @@
         border-style: none;
         vertical-align: top;
         border: $thick-border;
-
+        border-color: $ThemeGreen;
         display: block;
         border-left: 0px solid transparent;
         border-right: 0px solid transparent;
@@ -215,6 +216,8 @@
 
     blockquote p {
         font-size: 1em;
+        font-family: serif;
+        font-style: italic;
     }
 
     address {

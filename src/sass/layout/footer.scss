@@ -6,8 +6,11 @@
     padding: 0 calc(15px + 1%) 0;
     .footer-col {
         clear: both;
-        @include bp(min-lg) {
-            font-size: 1.5em;
+        @include bp(min-xl) {
+            li, p, h3 {
+                font-size: 20px!important;
+
+            }
         }
         ul, li {
             padding-left: 0;

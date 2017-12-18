@@ -25,7 +25,7 @@
     clear: both;
     position: relative;
     width: 100%;
-    max-width: 1280px;
+    max-width: calc(100% - 30px - 2%);
     margin: 0 auto;
     padding: 0 5px;
     box-sizing: border-box;
@@ -34,57 +34,16 @@
         width: 100%;
         box-sizing: border-box;
     }
+
+    @include bp(min-xl){
+        max-width: 1470px;
+    }
+    @include bp(min-lg){
+        padding-left: calc(15px + 1%);
+        padding-right: calc(15px + 1%);
+    }
 }
 
 .row {
     clear: both;
-}
-
-
-
-@include bp(min-lg){
-    .container {
-
-        .columns {
-            float: left;
-            min-height: 1px;
-        }
-
-        .one.columns                    { width: calc( ( ( 100% / 12) * 1 ) ); }
-        .two.columns                    { width: calc( ( ( 100% / 12) * 2 ) ); }
-        .three.columns                  { width: calc( ( ( 100% / 12) * 3 ) ); }
-        .four.columns                   { width: calc( ( ( 100% / 12) * 4 ) ); }
-        .five.columns                   { width: calc( ( ( 100% / 12) * 5 ) ); }
-        .six.columns                    { width: calc( ( ( 100% / 12) * 6 ) ); }
-        .seven.columns                  { width: calc( ( ( 100% / 12) * 7 ) ); }
-        .eight.columns                  { width: calc( ( ( 100% / 12) * 8 ) ); }
-        .nine.columns                   { width: calc( ( ( 100% / 12) * 9 ) ); }
-        .ten.columns                    { width: calc( ( ( 100% / 12) * 10) ); }
-        .eleven.columns                 { width: calc( ( ( 100% / 12) * 11) ); }
-        .twelve.columns                 { width: calc( ( ( 100% / 12) * 12) ); }
-
-        .one-third.columns              { width: calc( ( ( 100% / 12) * 4 ) ); }
-        .two-thirds.columns             { width: calc( ( ( 100% / 12) * 8 ) ); }
-
-        .one-half.columns               { width: calc( ( ( 100% / 12) * 6 ) ); }
-
-        /* Offsets */
-        .offset-by-one.columns          { margin-left: calc( ( ( 100% / 12) * 1 ));}
-        .offset-by-two.columns          { margin-left: calc( ( ( 100% / 12) * 2 ));}
-        .offset-by-three.columns        { margin-left: calc( ( ( 100% / 12) * 3 ));}
-        .offset-by-four.columns         { margin-left: calc( ( ( 100% / 12) * 4 ));}
-        .offset-by-five.columns         { margin-left: calc( ( ( 100% / 12) * 5 ));}
-        .offset-by-six.columns          { margin-left: calc( ( ( 100% / 12) * 6 ));}
-        .offset-by-seven.columns        { margin-left: calc( ( ( 100% / 12) * 7 ));}
-        .offset-by-eight.columns        { margin-left: calc( ( ( 100% / 12) * 8 ));}
-        .offset-by-nine.columns         { margin-left: calc( ( ( 100% / 12) * 9 ));}
-        .offset-by-ten.columns          { margin-left: calc( ( ( 100% / 12) * 10));}
-        .offset-by-eleven.columns       { margin-left: calc( ( ( 100% / 12) * 11));}
-
-        .offset-by-one-third.columns    { margin-left: calc( ( ( 100% / 12) * 4 ));}
-        .offset-by-two-thirds.columns   { margin-left: calc( ( ( 100% / 12) * 8 ));}
-
-        .offset-by-one-half.columns     { margin-left: calc( ( ( 100% / 12) * 6 )); }
-    }
-
 }
