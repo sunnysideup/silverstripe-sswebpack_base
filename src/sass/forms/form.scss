@@ -48,16 +48,7 @@
         * input fields basics
         *
         */
-        input,
-        select,
-        textarea {
-           position: relative;
-           background-color: $White;
-           border: none!important;
-           &:focus {
-               background-color: $formTextAreaBackgroundColour;
-           }
-        }
+
 
         .middleColumn input,
         .middleColumn textarea,
@@ -68,6 +59,8 @@
         .middleColumn textarea,
         .middleColumn select,
         .middleColumn span.readonly {
+            position: relative;
+            background-color: $White;
             border: 1px solid $White;
             padding: 0.7em;
             margin-top: 0px;
@@ -76,6 +69,9 @@
             max-width: 40rem;
             font-size: 16px!important;
             border-radius: 4px;
+            &:focus {
+                background-color: $FormFieldFocusColour;
+            }
         }
 
         input[type=text],
@@ -167,7 +163,6 @@
             display: block;
             padding: 1em;
             text-align: center;
-            border-bottom: 1px solid #D3D4B6;
             color: $White;
             a {
                 color: $White;
