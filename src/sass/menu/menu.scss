@@ -36,8 +36,8 @@ header {
         a  {
             color: $White;
             text-decoration: none;
-            font-size: 21px;
-            text-transform: lowercase;            
+            font-size: 20px;
+            text-transform: lowercase;
         }
         a.show-children,
         a.show-parent {
@@ -63,7 +63,7 @@ header {
                 }
                 &.current {
                     a {
-                        color: #fff;
+                        color: $White;
                     }
                     a,
                     a:hover{
@@ -77,13 +77,13 @@ header {
                         &.has-parent {
                             border-bottom: $thick-border;
                         }
-                        color: #fff;
+                        color: $White;
                         opacity: 0.5;
                         &:hover {
                             opacity: 1;
                         }
                         i {
-                            color: #fff;
+                            color: $White;
                         }
 
                     }
@@ -134,7 +134,7 @@ body.has-menu-overlay {
             overflow-y: auto;
             display: block;
             border-left: $thick-border;
-            border-color: #fff;
+            border-color: $White;
             @include bp(min-md){
                 max-width: 400px;
             }
@@ -242,7 +242,7 @@ body.has-menu-overlay {
                             }
 
                             a.show-children i {
-                                color: #fff;
+                                color: $White;
                             }
 
                             &.has-parent {

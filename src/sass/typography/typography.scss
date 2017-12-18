@@ -1,7 +1,7 @@
 
 .typography {
     font-family: $TextFont;
-    font-size: 19px;
+    font-size: 20px;
     letter-spacing: 1px;
     hyphens: auto;
     overflow-wrap: break-word;
@@ -206,112 +206,6 @@
 
 
 
-     /* tables */
-    table {
-        margin: 2em 0 2em;
-        width: 100%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    th,
-    td {
-        padding: 0.7em;
-        border-right: 1px dotted $LightGrey;
-        background-color: $White;
-        font-size: 14px!important;
-        vertical-align: top;
-        border-bottom: 1px solid $Accent1Colour
-    }
-    th:last-child,
-    td:last-child {
-        border-right: none;
-    }
-
-    table th[scope='col'] {
-        vertical-align: bottom;
-        font-weight: bold;
-        border-bottom: 2px solid $Accent1Colour
-    }
-
-    table th[scope='row'] {
-        text-align: left;
-        vertical-align: top;
-        font-weight: bold;
-    }
-
-    thead {
-        tr:first-child {
-            td, th {
-                border-top:none;
-            }
-        }
-        tr:last-child {
-            td, th {
-                border-bottom: 2px solid $Accent1Colour
-            }
-        }
-    }
-
-    tfoot {
-        tr:first-child {
-            td, th {
-                border-top: 2px solid $Accent1Colour
-            }
-        }
-        tr:last-child {
-            td, th {
-                border-bottom: 0px solid $Accent1Colour
-            }
-        }
-    }
-
-    table th a {
-        color: $White;
-    }
-
-    table td {
-        vertical-align: top;
-    }
-
-    table td p,
-     table td li {
-        margin: 0px;
-        padding: 0px;
-        list-style: none!important;
-        &:before {
-            content: ''!important;
-        }
-    }
-
-    table td ol,
-    table td ul {
-        margin-top: 0px;
-        padding-top: 0px;
-        margin-left: 0px;
-        padding-left: 0px;
-    }
-    td li {
-        list-style-position: inside;
-        list-style-type: square;
-        list-style-image: none;
-    }
-
-    table ul {
-        -moz-column-count: 1;
-        -moz-column-gap: 0;
-        -webkit-column-count: 1;
-        -webkit-column-gap: 0;
-        column-count: 1;
-        column-gap: 0;
-    }
-
-    table address {
-        padding-top: 1em;
-        padding-bottom: 0;
-        padding-left: 0;
-        margin-left: 0;
-    }
-
 
      /**
       * address and pre
@@ -337,7 +231,7 @@
         font-size: 0.7em;
         padding: 0.7em;
         margin: 0.9em 0;
-        color: #000;
+        color: $Black;
         background-color: $SuperLightGrey;
           /* gradient */
         background-position: 0px center;
