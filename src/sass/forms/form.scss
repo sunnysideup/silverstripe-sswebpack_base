@@ -3,7 +3,7 @@
 */
 .typography {
     form {
-        background-color: $HZGreen;
+        background-color: $ThemeGreen;
         border-radius: 5px;
         * {
             transition: all 0.3s ease 0s;
@@ -134,8 +134,8 @@
         }
 
         label.left {
+            border: none;
             display: inline-block;
-            border-bottom: 1px solid $LighterGrey;
             color: $TextColour;
         }
 

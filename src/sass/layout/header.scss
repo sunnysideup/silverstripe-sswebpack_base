@@ -14,8 +14,7 @@ header {
         padding: 20px;
         #site-heading {
             display: block;
-            color: $HZNavy;
-            color: $ThemeDarkOrange;
+            color: $ThemeLightOrange;
             font-family: $HeaderFont;
             font-size: 20px;
             @include bp(min-sm) {
