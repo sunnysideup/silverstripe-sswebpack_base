@@ -211,6 +211,9 @@
             input {
                 font-size: 20px;
                 font-weight: 400;
+                background-color: $ThemePinky;
+                border-color: $ThemeNavy;
+                color: $ThemeNavy;
                 &:hover {
                     background-color: $ThemeGreen;
                 }
