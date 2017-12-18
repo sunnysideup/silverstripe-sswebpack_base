@@ -18,7 +18,7 @@ html {
 body {
     min-height: 100%;
     font-family: $TextFont;
-    background-color: $HZNavy;
+    background-color: $BackgroundColour;
 }
 
 #Wrapper {
@@ -42,6 +42,11 @@ body {
     border: none;
     padding:0;
     margin: 0;
+}
+
+#content-area main {
+    @extend .container;
+    float: none;
 }
 
 

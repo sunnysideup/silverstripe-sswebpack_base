@@ -1,8 +1,11 @@
 
 .typography {
     font-family: $TextFont;
-    font-size: 16px;
-    color: #9e6b6b;
+    font-size: 19px;
+    color: $ThemePinky;
+    letter-spacing: 1px;
+    hyphens: auto;
+    overflow-wrap: break-word;
 
     /**
      * all
@@ -13,10 +16,14 @@
     h4,
     h5,
     h6 {
-        padding-top: 0.3em;
-        padding-bottom: 0.3em;
+        margin-bottom: 0px;
+        padding: 0;
+        padding-top: 2em;
+        padding-bottom: 0.5em;
+        text-transform: uppercase;
+        color: $ThemeGreen;
+        font-weight: 700;
         font-family: $HeaderFont;
-        color: $Accent1Colour;
     }
 
     ul {
@@ -25,6 +32,8 @@
 
     li,
     p {
+        line-height: 1.5;
+        font-weight: 300;
         padding-top: 0.5em;
         padding-bottom: 0.5em;
     }
@@ -73,6 +82,16 @@
     /**
      * headings
      */
+     h1 {
+         font-size: 32px;
+     }
+     h2 {
+         font-size: 24px;
+     }
+     h3 {
+         font-size: 20px;
+     }
+
     h1,
     h2 {
         padding-top: 1.7em;
@@ -80,17 +99,10 @@
         line-height: 1;
         font-weight: 400;
     }
-    h1 {
-        font-size: 35px;
-    }
-    h2 {
-        font-size: 30px;
-    }
 
     h2, h4, h6 {
         color: $Accent2Colour;
     }
-
 
     h3,
     h4,
@@ -99,9 +111,7 @@
         padding-top: 1.5em;
         font-weight: 700;
     }
-    h3 {
-        font-size: 25px;
-    }
+
     h4,
     h5,
     h6 {
@@ -115,7 +125,7 @@
     li,
     p {
         line-height: 1.5;
-        font-weight: 400;
+        font-weight: 300;
     }
 
     ol {
@@ -150,7 +160,7 @@
     strong,
     b {
         font-weight: 700;
-        color: $HZDarkOrange;
+        color: $ThemeDarkOrange;
     }
 
     u {
@@ -158,6 +168,12 @@
     }
 
     a {
+        font-weight: 500;
+        text-decoration: none;
+        border-bottom: $thick-border-transparent;
+        &:hover {
+            border-bottom: $thick-border;
+        }
         color: $LinkColour;
     }
 
@@ -166,25 +182,36 @@
     }
 
     li {
+        padding-top: 0.1em;
+        padding-bottom: 0.1em;
+        margin-top: 0;
+        margin-bottom: 0;
+
         list-style: disc;
         list-style-position: outside;
         margin-left: 1em;
     }
 
     img {
-        max-width: calc(100% - 22px);
-        border: 2px dotted #ddd;
+        max-width: 100%;
+        width: auto;
+        height: auto;
+        margin: 0px auto 20px auto;
+        padding: 0;
+        border-style: none;
+        vertical-align: top;
+        border: $thick-border;
+
         display: block;
-        margin: 1em auto;
-        padding: 10px calc(20%);
-        width: 60%;
         border-left: 0px solid transparent;
         border-right: 0px solid transparent;
     }
 
-
-
-
+    figure {
+        display: block;
+        text-align: center;
+        margin: 0 auto 20px;
+    }
     /**
      * Tables
      */
@@ -313,7 +340,7 @@
         margin-left: 3em;
         padding-top: 2em;
         padding-bottom: 2em;
-        color: #000;
+        color: $White;
     }
 
     pre {
@@ -341,6 +368,7 @@
      */
      div.media {
          padding: 2em 0;
+         background: none;
          background-color: $SuperLightGrey;
          margin: 1em 0;
      }
@@ -351,15 +379,4 @@
          display: block;
          max-width: 100%!important;
      }
-}
-
-.one.column,
-.one.columns,
-.two.columns,
-.three.columns,
-.four.columns {
-    h1,
-    h2 {
-        font-size: 25px;
-    }
 }

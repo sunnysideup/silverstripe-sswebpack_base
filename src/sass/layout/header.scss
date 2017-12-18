@@ -15,6 +15,7 @@ header {
         #site-heading {
             display: block;
             color: $HZNavy;
+            color: $ThemeDarkOrange;
             font-family: $HeaderFont;
             font-size: 20px;
             @include bp(min-sm) {
@@ -38,7 +39,7 @@ header {
             @include bp(min-md) {
                 font-size: 20px;
             }
-            text-transform: uppercase;
+            text-transform: lowercase;
             transition: all 0.3s ease 0s;
             -webkit-transition: all 0.3s ease 0s;
         }
@@ -53,7 +54,8 @@ header {
         opacity: 0.5;
         z-index: 1;
         padding-bottom: 0;
-        border-bottom: 1px solid #fff;
+        border-bottom: 1px solid $White;
+        background-image: none;
         .container{
             width: 100%;
             max-width: 100%;
