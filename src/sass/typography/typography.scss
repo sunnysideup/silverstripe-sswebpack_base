@@ -2,7 +2,6 @@
 .typography {
     font-family: $TextFont;
     font-size: 19px;
-    color: $ThemePinky;
     letter-spacing: 1px;
     hyphens: auto;
     overflow-wrap: break-word;
@@ -24,18 +23,6 @@
         color: $ThemeGreen;
         font-weight: 700;
         font-family: $HeaderFont;
-    }
-
-    ul {
-        padding-left: 15px;
-    }
-
-    li,
-    p {
-        line-height: 1.5;
-        font-weight: 300;
-        padding-top: 0.5em;
-        padding-bottom: 0.5em;
     }
 
 
@@ -97,12 +84,8 @@
         padding-top: 1.7em;
         padding-bottom: 0.3em;
         line-height: 1;
-        font-weight: 400;
     }
 
-    h2, h4, h6 {
-        color: $Accent2Colour;
-    }
 
     h3,
     h4,
@@ -126,8 +109,13 @@
     p {
         line-height: 1.5;
         font-weight: 300;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
     }
 
+    ul {
+        padding-left: 15px;
+    }
     ol {
         padding: 2em;
     }
