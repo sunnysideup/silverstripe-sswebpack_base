@@ -1,0 +1,29 @@
+
+
+#Breadcrumbs {
+    display: none;
+    @include bp(min-sm) {
+        display: block;
+    }
+    opacity: 0.5;
+    position: absolute;
+    top: calc(64px + 30px + 15px);
+    z-index: 2;
+    font-size: 14px;
+    max-width: 1430px;
+    padding: 10px 20px;
+    margin: 0 auto;
+    right: calc(15px + 1%);
+    left: calc(15px + 1%);
+    background-color: transparent;
+    color: #fff;
+    a {
+        color: #fff;
+        text-decoration: none;
+    }
+}
+.scrolled {
+    #Breadcrumbs {
+        display: none;
+    }
+}
