@@ -39,7 +39,7 @@
         &:after {
             content: ' / ';
             margin-right: 10px;
-            color: $LightGrey;
+            color: $ThemeLightGrey;
         }
         &:last-child:after {
             content: '';
