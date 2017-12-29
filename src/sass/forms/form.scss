@@ -137,7 +137,7 @@
 
         .required label.left:before {
             content: "* ";
-            color: $Accent1Colour;
+            color: $White;
         }
         /**
         * labels right
@@ -211,6 +211,9 @@
             input {
                 font-size: 20px;
                 font-weight: 400;
+                background-color: $ThemePinky;
+                color: $ThemeNavy;
+                border-color: $ThemeNavy;
                 &:hover {
                     background-color: $ThemeGreen;
                 }
