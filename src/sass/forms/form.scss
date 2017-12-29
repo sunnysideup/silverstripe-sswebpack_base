@@ -211,22 +211,20 @@
             input {
                 font-size: 20px;
                 font-weight: 400;
-                background-color: $ThemePinky;
-                color: $ThemeNavy;
-                border-color: $ThemeNavy;
+                background-color: $ThemeGreen;
+                border-color: $White;
+                color: $White;
                 &:hover {
-                    background-color: $ThemeGreen;
+                    color: $ThemeNavy!important;
+                    border-color: $ThemeNavy!important;
                 }
                 &:active {
-                    background-color: red;
+                    background-color: $ThemePinky!important;
                 }
             }
         }
 
-        .Actions input,
-        input.action {
-            padding-right: 30px;
-        }
+
 
         .Actions input.action {
             margin-left: 0px;
@@ -323,7 +321,6 @@
         padding: 1em;
         border-radius: 50px;
         text-decoration: none!important;
-        padding-right: 17px!important;
         width: auto;
         max-width: 250px;
         text-align: center;
@@ -341,7 +338,6 @@
         padding: 1em;
         border-radius: 50px;
         text-decoration: none!important;
-        padding-right: 17px!important;
         width: auto;
         text-align: center;
         font-family: $TextFont;

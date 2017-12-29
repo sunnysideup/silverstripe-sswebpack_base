@@ -17,19 +17,21 @@ header {
             color: $ThemeRed;
             font-family: $HeaderFont;
             font-size: 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: 700;
+            text-shadow: 1px 1px 7px rgba(255,255,255, 0.3);
             @include bp(min-sm) {
                 font-size: 30px;
             }
             @include bp(min-md) {
                 font-size: 40px;
             }
-            text-decoration: none;
-            text-transform: uppercase;
-            font-weight: 700;
         }
 
         .tagline {
             position: absolute;
+            font-weight: bold;
             bottom: 0;
             color: $White;
             font-size: 15px;
@@ -59,8 +61,10 @@ header {
             width: 100%;
             max-width: 100%;
             #site-heading {
-                display: none;
+                opacity: 0.15;
+                font-size: 20px;
                 @include bp(min-xl) {
+                    opacity: 0.8;
                     font-size: 30px;
                     color: #fff;
                     display: block;
