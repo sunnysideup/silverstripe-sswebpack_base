@@ -49,39 +49,28 @@
         *
         */
 
-
-        .middleColumn input,
-        .middleColumn textarea,
-        .middleColumn select {
-            background-color: $White;
-        }
         .middleColumn input,
         .middleColumn textarea,
         .middleColumn select,
         .middleColumn span.readonly {
             position: relative;
-            background-color: $White;
+            background-color: $FormFieldFocusColour;
             border: 1px solid $White;
             padding: 0.7em;
             margin-top: 0px;
             width: calc(100% - 1.4em);
-            color: $Black;
+            color: $White;
             max-width: 40rem;
             font-size: 16px!important;
             border-radius: 4px;
             &:focus {
-                background-color: $FormFieldFocusColour;
+                background-color: $ThemePinky;
+                outline: none!important;
+                color: $Black;
             }
         }
 
-        input[type=text],
-        input[type=email],
-        input[type=password],
-        textarea,
-        select,
-        .middleColumn span.readonly  {
-            color: $Black;
-        }
+
 
 
 
@@ -89,13 +78,6 @@
         * fields interaction
         */
 
-
-        .middleColumn input:focus,
-        .middleColumn textarea:focus,
-        .middleColumn select:focus {
-            color: $White;
-            outline: none!important;
-        }
         //
         // input[type=text]:focus,
         // input[type=email]:focus,
@@ -215,8 +197,8 @@
                 border-color: $White;
                 color: $White;
                 &:hover {
-                    color: $ThemeNavy!important;
-                    border-color: $ThemeNavy!important;
+                    color: $ThemePinky!important;
+                    border-color: $ThemePinky!important;
                 }
                 &:active {
                     background-color: $ThemePinky!important;
