@@ -54,7 +54,7 @@
         .middleColumn select,
         .middleColumn span.readonly {
             position: relative;
-            background-color: $FormFieldFocusColour;
+            background-color: transparent;
             border: 1px solid $White;
             padding: 0.7em;
             margin-top: 0px;
