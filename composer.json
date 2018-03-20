@@ -20,11 +20,11 @@
         }
     ],
     "require": {
-        "silverstripe/framework": "~3.1",
+        "silverstripe/framework": "~3.6",
         "sunnysideup/webpack_requirements_backend": "*",
         "sunnysideup/sswebpack_engine_only": "*",
         "sunnysideup/metatags": "*",
-        "silverstripe/cms": "~3.1"
+        "silverstripe/cms": "~3.6"
     },
     "extra": {
         "installer-name": "webpacktheme"
