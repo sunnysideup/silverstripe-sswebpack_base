@@ -23,6 +23,7 @@
         a {
             color: $White;
             text-decoration: none;
+            border-bottom: $thick-border-transparent;
         }
         a.section {
             color: $ThemePinky;
@@ -57,6 +58,7 @@
         padding-bottom: 2em;
         a {
             text-decoration: none;
+            border: $thick-border-transparent;
         }
     }
     h3 {
