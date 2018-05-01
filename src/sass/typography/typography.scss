@@ -157,11 +157,13 @@
     }
 
     a {
-        font-weight: 500;
+        * {
+            transition: all 0.3s ease 0s;
+        }
         text-decoration: none;
-        border-bottom: $thick-border-transparent;
+        border-bottom: $thick-border;
         &:hover {
-            border-bottom: $thick-border;
+            border-bottom: $thick-border-more-strength;
         }
         color: $LinkColour;
     }
